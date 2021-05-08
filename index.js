@@ -14,7 +14,7 @@ app.use(cors())
 app.use(secure)
 app.use(express.static("public"))
 
-app.use('/', mainrouter)
+app.use('/main', mainrouter)
 app.use('/api', apirouter)
 
 app.listen(PORT, () => {
