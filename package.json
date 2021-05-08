@@ -1,5 +1,5 @@
 {
-  "name": "api-zhirrr",
+  "name": "loli-kiler",
   "version": "1.1.0",
   "description": "My Rest Api Projectttttt",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zhirrr/Zhirrr-Api.git"
+    "url": "git+https://github.com/LoliKillers/Zhirrr-Api.git"
   },
   "keywords": [
     "simple",
@@ -17,10 +17,10 @@
     "rest",
     "api"
   ],
-  "author": "Zhirrr",
+  "author": "Loli Killers",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zhirrr/Zhirrr-Api/issues"
+    "url": "https://github.com/LoliKillers/Zhirrr-Api/issues"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -45,5 +45,5 @@
     "ytdl-core": "^4.4.5",
     "ytpl": "^2.0.5"
   },
-  "homepage": "https://github.com/Zhirrr/Zhirrr-Api#readme"
+  "homepage": "https://github.com/Loli-Killers/Zhirrr-Api#readme"
 }
