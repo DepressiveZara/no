@@ -3,9 +3,9 @@ var __path = process.cwd(),
      { color } = require(__path + '/lib/color.js')
 
 // Connection URL
-var url = '';
+var url = 'https://loli-kiler.herokuapp.com/';
 try {
-if(url == '') throw console.log(color('Cek konfigurasi database, var url belum diisi','red'));
+if(url == 'url') throw console.log(color('Cek konfigurasi database, var url belum diisi','red'));
 } catch (e) {
 	return;
 	}
