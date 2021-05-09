@@ -1895,7 +1895,7 @@ router.get('/lolikill/caklontong', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'LoliKillers') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://lolkill-api.herokuapp.com/api/lolikill?type=caklontong`))
+       fetch(encodeURI(`https://lolkill-api.herokuapp.com/api/lolikill/quote?type=caklontong`))
         .then(response => response.json())
         .then(data => {
         var result = data;
