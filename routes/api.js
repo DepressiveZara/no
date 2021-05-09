@@ -1889,7 +1889,7 @@ router.get('/random/wallpaper', async (req, res, next) => {
 })
 
 
-router.get('/kuis/caklontong', async (req, res, next) => {
+router.get('/lolikill/caklontong', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
