@@ -1889,13 +1889,13 @@ router.get('/random/wallpaper', async (req, res, next) => {
 })
 
 
-router.get('/lolikill/caklontong', async (req, res, next) => {
+router.get('/kuis/caklontong', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'LoliKillers') return res.json(loghandler.invalidKey)
 
-       fetch(encodeURI(`https://lolkill-api.herokuapp.com/api/lolikill/quote?type=caklontong`))
+       fetch(encodeURI(`http://localhost:8080/api/kuis?type=caklontong`))
         .then(response => response.json())
         .then(data => {
         var result = data;
