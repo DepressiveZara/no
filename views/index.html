@@ -9,9 +9,9 @@
     <meta name="description" content="/">
     <meta name="author" content="/">
     <title>Rara - REST APIs</title>
+    <meta property="og:image" name="og:image" content="https://telegra.ph/file/c1f61d19ffcdeaa96b9bc.png">
     <meta property="og:site_name" name="og:site_name" content="Rara APIs">
     <meta property="og:title" name="og:title" content="Ramra Free Rest Api">
-    <meta property="og:url" name="og:url" content="ramra.herokuapp.com">
     <meta property="og:image" name="og:image" content="https://telegra.ph/file/c1f61d19ffcdeaa96b9bc.png">
     <meta property="og:description" name="og:description" content="Rara Free Api Rest Homepage that provides a wide variety of features for developers.">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -53,10 +53,13 @@
             <a class="collapse-item" href="api/yutub/video?url=https://youtu.be/xYJzwcZWJ0I&apikey=MASUKIN_APIKEY">YouTube Mp4</a>
             <a class="collapse-item" href="api/yutub/audio?url=https://youtu.be/xYJzwcZWJ0I&apikey=MASUKIN_APIKEY">YouTube Mp3</a>
             <a class="collapse-item" href="api/yutub/search?video=hanbunko hanabi kotori remix&apikey=MASUKIN_APIKEY">YouTube Search</a>
-            <a class="collapse-item" href="api/yutub/play?video=hanbunko hanabi kotori remix&apikey=MASUKIN_APIKEY">Yt Play Mp3</a>
+            <a class="collapse-item" href="api/yutub/play?video=always&apikey=MASUKIN_APIKEY">Yt Play Mp3</a>
+            <a class="collapse-item" href="api/yutub/playmp4?video=always&apikey=MASUKIN_APIKEY">Yt Play Mp4</a>
             <a class="collapse-item" href="api/fbdown/?url=https://www.facebook.com/197394889304/posts/10160272795609305/?app=fbl&apikey=MASUKIN_APIKEY">Facebook Downloader</a>
             <a class="collapse-item" href="api/instagram/stalk?username=jessicajane99&apikey=MASUKIN_APIKEY">Instagram Stalk</a>
             <a class="collapse-item" href="api/github/stalk?username=LoliKillers&apikey=MASUKIN_APIKEY">Github Stalk</a>
+            <a class="collapse-item" href="api/twitter/stalk?username=grcjessicajane&apikey=MASUKIN_APIKEY">Twitter Stalk</a>
+            <a class="collapse-item" href="api/tiktod/stalk?username=graciajessicajane&apikey=MASUKIN_APIKEY">Tiktok Stalk</a>
             <a class="collapse-item" href="api/tiktod/withwm?url=https://www.tiktok.com/@bellapoarch/video/6871376520468794629&apikey=MASUKIN_APIKEY">Tiktok With Wm</a>
             <a class="collapse-item" href="api/pinterestdl?url=https://www.pinterest.com/pin/777293216922470174/&apikey=MASUKIN_APIKEY">Pinterest Downloader</a>
             <a class="collapse-item" href="api/wattpad/search?search=ngakak&apikey=MASUKIN_APIKEY">Wattpad Search</a>
@@ -483,7 +486,7 @@
              <div class="col mr-2">
               <div class="text-xs font-weight-bold text-uppercase mb-1">Visitor</div>
                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                <div class="visitor" id="visitor">00</div>
+                <div class="visitor" id="visitor">-</div>
                </div>
               <div class="mt-2 mb-0 text-muted text-xs">
 
@@ -504,9 +507,9 @@
 <div class="row align-items-center">
 <div class="col mr-2">
 <div class="text-xs font-weight-bold text-uppercase mb-1">Total API</div>
-<div class="h5 mb-0 font-weight-bold text-gray-800">95</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">undefined</div>
 <div class="mt-2 mb-0 text-muted text-xs">
-<span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 98.2%</span>
+<span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 0.0%</span>
 <span>Since last month</span>
 </div>
 </div>
@@ -517,23 +520,6 @@
 </div>
 </div>
 </div>
-<form action="/api/cekapikey">
-      <div class="col-xl-10 col-md-6 mb-4">
-       <div class="card mb-4">
-        <div class="card-header py-3">
-         <div class="card-body">
-          <h6 class="animated">Check Your Apikey</h6>
-           <input type="text" class="form-control" placeholder="Your apikey" name="apikey" required="">
-            <button class="btn btn-danger btn-icon-split">
-             <span class="icon text-white-50">
-              <i class="fas fa-check"></i>
-             </span>
-             <span class="text">Check</span>
-            </button>
-         </div>
-        </div>
-       </div>
-      </div>
 
         </div>
         <!---Container Fluid-->
@@ -563,5 +549,18 @@
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>  
 </body>
+<script>
+  function getvisitor(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://api.countapi.xyz/hit/ramra.herokuapp.com/visits';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("visitor").textContent = data.value
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
+  
+</script>
 
 </html>
