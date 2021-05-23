@@ -25,7 +25,11 @@ a:focus {
 }
 
 #wrapper #content-wrapper {
-  background-color: #fafdfb;
+  background-image: url("https://i.ibb.co/ncZWj1Q/2.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
   width: 100%;
   overflow-x: hidden
 }
@@ -597,13 +601,17 @@ a:focus {
 }
 
 .bg-navbar {
-  background-color: #6777ef
+  background-color: 0
 }
 
 .sidebar {
   min-height: 100vh;
   width: 14rem !important;
-  background-color: #fff !important;
+  background-image: url("https://i.ibb.co/ncZWj1Q/2.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
   -webkit-box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
   box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
   z-index: 0
@@ -996,7 +1004,7 @@ a:focus {
       padding: .5rem 1rem;
       margin: 0 .5rem;
       display: block;
-      color: #3a3b45;
+      color: #ffffff;
       text-decoration: none;
       border-radius: .35rem;
       white-space: nowrap
@@ -1091,8 +1099,8 @@ a:focus {
 }
 
 .sidebar-light .sidebar-brand {
-  color: #fafafa;
-  background-color: #4c60da
+  color: #000;
+  background-color: #0
 }
 
 .sidebar-light hr.sidebar-divider {
@@ -1100,32 +1108,32 @@ a:focus {
 }
 
 .sidebar-light .sidebar-heading {
-  color: #b7b9cc
+  color: #000000
 }
 
 .sidebar-light .nav-item .nav-link {
-  color: #858796
+  color: #000000
 }
 
 .sidebar-light .nav-item .nav-link i {
-  color: #9e9e9e
+  color: #000000
 }
 
 .sidebar-light .nav-item .nav-link:active,
 .sidebar-light .nav-item .nav-link:focus,
 .sidebar-light .nav-item .nav-link:hover {
-  color: #6e707e;
+  color: #ffffff;
   background-color: #eee
 }
 
 .sidebar-light .nav-item .nav-link:active i,
 .sidebar-light .nav-item .nav-link:focus i,
 .sidebar-light .nav-item .nav-link:hover i {
-  color: #6e707e
+  color: #ffffff
 }
 
 .sidebar-light .nav-item .nav-link[data-toggle=collapse]::after {
-  color: #b7b9cc
+  color: #0000ff
 }
 
 .sidebar-light .nav-item.active .nav-link {
@@ -1137,7 +1145,7 @@ a:focus {
 }
 
 .sidebar-light #sidebarToggle {
-  background-color: #eaecf4
+  background-color: #ffffff
 }
 
 .sidebar-light #sidebarToggle::after {
@@ -1145,7 +1153,12 @@ a:focus {
 }
 
 .sidebar-light #sidebarToggle:hover {
-  background-color: #dddfeb
+  background-image: url("https://i.ibb.co/ncZWj1Q/2.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 }
 
 .sidebar-dark .sidebar-brand {
@@ -1802,7 +1815,7 @@ a:focus {
 }
 
 footer.sticky-footer {
-  padding: 2rem 0;
+  padding: 0.5rem 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15);
