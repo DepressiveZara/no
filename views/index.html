@@ -1,551 +1,166 @@
 
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="csrf-token" content="KxYA8Qogt9yn2YDkBCvAZWR0Ec661lPiiN0o1tsF"><title>Documentation</title><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><meta property="og:locale" content="id_ID" /><meta property="og:type" content="website" /><meta property="og:url" content="http://public-restapi.herokuapp.com/documentation" /><meta property="og:title" content="Documentation" /><meta property="og:description" content="Public Rest APi." /><meta property="og:image" content="http://public-restapi.herokuapp.com/assets/images/app/apple-touch-icon-323092.jpg" /><meta property="og:site_name" content="PublicRestAPi" /><meta property="twitter:card" content="summary" /><link rel="stylesheet" href="/assets/admin/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"><link rel="stylesheet" href="/assets/admin/dist/css/skins/_all-skins.min.css"><link rel="stylesheet" href="/assets/admin/dist/css/AdminLTE.min.css"><style>
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px
+        }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="ARNZ™ REST API">
-<meta name="author" content="ARI">
-<link href="https://telegra.ph/file/3b27c04b1c1fa2962f5cf.jpg" rel="icon">
-<title>ARNZ™</title>
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
 
-<link rel="stylesheet" href="./css/font-awesome.css">
-<link rel="stylesheet" href="./static/css/ruang-admin.min.css" />
-<link rel="stylesheet" href="./static/css/bootstrap.min.css" />
-<link rel="stylesheet" href="./css/style">
-<link href="https://indrijunanda.github.io/RuangAdmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://argon-dashboard-flask.creative-tim.com/static/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+        ::-webkit-scrollbar-thumb {
+            background: #aaa;
+            border-radius: 999px;
+        }
 
-</head>
-<body id="page-top" onload="getvisitor();">
-<div id="wrapper">
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4091d4;
+        }
 
-<ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-<div class="sidebar-brand-text mx-3">Pais</div>
-</a>
-<hr class="sidebar-divider my-0">
-<li class="nav-item">
-<a class="nav-link" href="#">
-<i class="fa fa-code" aria-hidden="true"></i>
-<span> Document</span></a>
-</li>
-<hr class="sidebar-divider">
-<div class="sidebar-heading">
-Features
-</div>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNews" aria-expanded="true" aria-controls="collapseAnime">
-<i class="fa fa-search"></i>
-<span>News API</span>
-</a>
-<div id="collapseNews" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-<h6 class="collapse-header">News Features</h6>
-<a class="collapse-item" href="/news/merdeka?apikey=APIKEY">Merdeka.com</a>
-<a class="collapse-item" href="/news/antaranews?apikey=APIKEY">AntaraNews</a>
-<a class="collapse-item" href="news/jalantikus?apikey=APIKEY">JalanTikus</a>
-<a class="collapse-item" href="/news/sjalantikus?search=pubg&apikey=APIKEY">Search JalanTikus</a>
-<a class="collapse-item" href="/api/palingmurah?apikey=APIKEY">Paling Murah</a>
-<a class="collapse-item" href="/api/shopee?search=madu&apikey=APIKEY">Shopee</a>
-<a class="collapse-item" href="/api/flashsale?apikey=APIKEY">Flashsale-Shopee</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDownload" aria-expanded="true" aria-controls="collapseAnime">
-<i class="fas fa-fw fa-arrow-down"></i>
-<span>Downloader API</span>
-</a>
-<div id="collapseDownload" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-<h6 class="collapse-header">Downloader Features</h6>
-<a class="collapse-item" href="/download/joox?search=see%20you%20again&apikey=APIKEY">Joox</a>
-<a class="collapse-item" href="/api/ig?url=https://www.instagram.com/p/CLSIkIOh0ad/?utm_source=ig_web_copy_link&apikey=APIKEY">Instagram</a>
-<a class="collapse-item" href="/api/ytdl?link=https://www.youtube.com/watch?v=en9KJdbrZj0&start_radio=1&apikey=APIKEY">Yt Mp3 Downloader</a>
-<a class="collapse-item" href="/api/happymod?search=minicraft&apikey=APIKEY">HappyMod Search</a>
-<a class="collapse-item" href="/api/ytvideo?link=https://www.youtube.com/watch?v=en9KJdbrZj0&start_radio=1&apikey=APIKEY">Yt Mp4 Downloader</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnime" aria-expanded="true" aria-controls="collapseAnime">
-<i class="fas fa-fw fa-leaf"></i>
-<span>Anime</span>
-</a>
-<div id="collapseAnime" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-<h6 class="collapse-header">Anime Features</h6>
-<a class="collapse-item" href="/api/project-komikcast?apikey=APIKEY">Ongoing KomikCast</a>
-<a class="collapse-item" href="/api/ongoing-otakudesu?apikey=APIKEY">Ongoing Otakudesu</a>
-<a class="collapse-item" href="/api/trending-komiku?apikey=APIKEY">Top 1 Komiku</a>
-<a class="collapse-item" href="/api/ongoing-anoboy?apikey=APIKEY">Ongoing Anoboy</a>
-<a class="collapse-item" href="/api/anoboy-search?search=sao&apikey=APIKEY">Anoboy Search</a>
-<a class="collapse-item" href="/api/nekopoi?apikey=APIKEY">Nekopoi</a>
-<a class="collapse-item" href="/api/hentaipoi?apikey=APIKEY">Nekopoi Hn</a>
-<a class="collapse-item" href="/api/nekopoi?link=https://nekopoi.care/hentai/viper-gts&apikey=APIKEY">Nekopoi Scraper</a>
-<a class="collapse-item" href="/api/komiku?apikey=APIKEY">Komiku project</a>
-<a class="collapse-item" href="/api/anitoki?apikey=APIKEY">Anitoki Last Update</a>
-<a class="collapse-item" href="/api/komikus?search=my%20wife&apikey=APIKEY">Komiku Search</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRandom" aria-expanded="false" aria-controls="collapseRandom">
-<i class="fas fa-fw fa-bullseye"></i>
-<span>Random API</span>
-</a>
-<div id="collapseRandom" class="collapse" aria-labelledby="headingRandom" data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-<h6 class="collapse-header">Random Features</h6>
-<a class="collapse-item" href="/api/pantun?apikey=APIKEY">Pantun</a>
-<a class="collapse-item" href="/api/asupan?apikey=APIKEY">Video ptl</a>
-<a class="collapse-item" href="/api/chika?apikey=APIKEY">Vide Chika</a>
-<a class="collapse-item" href="/api/cita-cita?apikey=APIKEY">Cita-cita Winda</a>
-<a class="collapse-item" href="/api/neko?apikey=APIKEY">Neko (anime)</a>
-<a class="collapse-item" href="/api/hentai?apikey=APIKEY">Hentai (anime)</a>
-<a class="collapse-item" href="/api/blow?apikey=APIKEY">Blow (anime)</a>
-<a class="collapse-item" href="/api/neko?apikey=APIKEY">Nsfw Neko (anime)</a>
-<a class="collapse-item" href="/api/truthid?apikey=APIKEY">Truth-Ind</a>
-<a class="collapse-item" href="/api/truthen?apikey=APIKEY">Truth-Eng</a>
-<a class="collapse-item" href="/api/dareid?apikey=APIKEY">Dare-Ind</a>
-<a class="collapse-item" href="/api/dareen?apikey=APIKEY">Dare-Eng</a>
-<a class="collapse-item" href="/api/motivasi?apikey=APIKEY">Motivasi Hidup</a>
-<a class="collapse-item" href="/api/bts?apikey=APIKEY">Image BTS</a>
-<a class="collapse-item" href="/api/exo?apikey=APIKEY">Image EXO</a>
-<a class="collapse-item" href="/api/blackpink?apikey=APIKEY">Image Black Pink</a>
-<a class="collapse-item" href="/api/faktaunik?apikey=APIKEY">Fakta Unik</a>
-<a class="collapse-item" href="/api/katabijak?apikey=APIKEY">Kata bijak</a>
-<a class="collapse-item" href="/api/katasenja?apikey=APIKEY">Kata Senja</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true" aria-controls="collapseForm">
-<i class="fa fa-book"></i>
-<span>Educational API</span>
-</a>
-<div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-<h6 class="collapse-header">Educational Features</h6>
-<a class="collapse-item" href="/kbbi?kata=membaca">KBBI</a>
-<a class="collapse-item" href="/api/simsimii?text=simi%20cantik?&apikey=APIKEY">Sim Simi</a>
-<a class="collapse-item" href="/api/brainly?search=cara%20buat%20nasi&apikey=APIKEY">Brainly</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTextPro" aria-expanded="true" aria-controls="collapseForm">
-<i class="fa fa-fw fa-font"></i>
-<span>Text Pro Me</span>
-</a>
-<div id="collapseTextPro" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-<div class="py-2 collapse-inner rounded">
-<h6 class="collapse-header">Textprome Features</h6>
-<a class="collapse-item" href="/api/textpro/blackpink?text=pais&apikey=APIKEY">Blackpink</a>
-<a class="collapse-item" href="/api/textpro/matrix?text=pais&apikey=APIKEY">Matrix</a>
-<a class="collapse-item" href="/api/textpro/graffiti?text=Pais&text2=Gans&apikey=APIKEY">Graffiti</a>
-<a class="collapse-item" href="/api/textpro/phub?text=Pais&text2=Gans&apikey=APIKEY">Logo PHub</a>
-<a class="collapse-item" href="/api/textpro/christmas?text=Pais&apikey=APIKEY">Christmas</a>
-<a class="collapse-item" href="/api/textpro/winter?text=Pais&apikey=APIKEY">Winter</a>
-<a class="collapse-item" href="/api/textpro/sky?text=Pais&apikey=APIKEY">Sky</a>
-<a class="collapse-item" href="/api/textpro/luxury?text=Pais&apikey=APIKEY">Luxury</a>
-<a class="collapse-item" href="/api/textpro/gradient?text=Pais&apikey=APIKEY">Gradient</a>
-<a class="collapse-item" href="/api/textpro/vintage?text=Pais&apikey=APIKEY">Vintage</a>
-<a class="collapse-item" href="/api/textpro/beach?text=Pais&apikey=APIKEY">Beach</a>
-<a class="collapse-item" href="/api/textpro/sand-writing?text=Pais&apikey=APIKEY">Sand-writing</a>
-<a class="collapse-item" href="/api/textpro/sand-engraved?text=Pais&apikey=APIKEY">Sand-engraved</a>
-<a class="collapse-item" href="/api/textpro/glue-text?text=Pais&apikey=APIKEY">Glue-text</a>
-<a class="collapse-item" href="/api/textpro/summery-sand?text=Pais&apikey=APIKEY">Summery-sand</a>
-<a class="collapse-item" href="/api/textpro/space-3d?text=Pais&text2=Gans&apikey=APIKEY">Space-3d</a>
-<a class="collapse-item" href="/api/textpro/metal-dark?text=Pais&apikey=APIKEY">Metal-dark</a>
-<a class="collapse-item" href="/api/textpro/glitch-text?text=Pais&text2=Gans&apikey=APIKEY">Glitch-text</a>
-<a class="collapse-item" href="/api/textpro/stone-text?text=Pais&text2=Gans&apikey=APIKEY">Stone-text</a>
-<a class="collapse-item" href="/api/textpro/neon-light?text=Pais&apikey=APIKEY">Neon-light</a>
-<a class="collapse-item" href="/api/textpro/1917-style?text=Pais&apikey=APIKEY">1917-style</a>
-<a class="collapse-item" href="/api/textpro/minion-text?text=Pais&apikey=APIKEY">Minion-text</a>
-<a class="collapse-item" href="/api/textpro/holographic-3d?text=Pais&apikey=APIKEY">Holographic-3d</a>
-<a class="collapse-item" href="/api/textpro/metal-purple?text=Pais&apikey=APIKEY">Metal-purple</a>
-<a class="collapse-item" href="/api/textpro/deluxe-silver?text=Pais&apikey=APIKEY">Deluxe-silver</a>
-<a class="collapse-item" href="/api/textpro/avengers-logo?text=Pais&text2=Gans&apikey=APIKEY">Avengers-logo</a>
-<a class="collapse-item" href="/api/textpro/marvel-studios?text=Pais&text2=Gans&apikey=APIKEY">Marvel-studios</a>
-<a class="collapse-item" href="/api/textpro/marvel-studios2?text=Pais&text2=Gans&apikey=APIKEY">Marvel-studios2</a>
-<a class="collapse-item" href="/api/textpro/glossy-blue?text=Pais&apikey=APIKEY">Glossy-blue</a>
-<a class="collapse-item" href="/api/textpro/deluxe-gold?text=Pais&apikey=APIKEY">Deluxe-gold</a>
-<a class="collapse-item" href="/api/textpro/glossy-carbon?text=Pais&apikey=APIKEY">Glossy-carbon</a>
-<a class="collapse-item" href="/api/textpro/xmas?text=Pais&apikey=APIKEY">Xmas</a>
-<a class="collapse-item" href="/api/textpro/blood?text=Pais&apikey=APIKEY">Blood</a>
-<a class="collapse-item" href="/api/textpro/halloween?text=Pais&apikey=APIKEY">Halloween</a>
-<a class="collapse-item" href="/api/textpro/wolf?text=Pais&text2=Gans&apikey=APIKEY">Wolf</a>
-<a class="collapse-item" href="/api/textpro/wolf2?text=Pais&text2=Gans&apikey=APIKEY">Wolf2</a>
-<a class="collapse-item" href="/api/textpro/lion?text=Pais&text2=Gans&apikey=APIKEY">Lion</a>
-<a class="collapse-item" href="/api/textpro/ninja?text=Pais&text2=Gans&apikey=APIKEY">Ninja</a>
-<a class="collapse-item" href="/api/textpro/joker?text=Pais&apikey=APIKEY">Joker</a>
-<a class="collapse-item" href="/api/textpro/wicker?text=Pais&apikey=APIKEY">Wicker</a>
-<a class="collapse-item" href="/api/textpro/leaves?text=Pais&apikey=APIKEY">Leaves</a>
-<a class="collapse-item" href="/api/textpro/firework?text=Pais&apikey=APIKEY">Firework</a>
-<a class="collapse-item" href="/api/textpro/skeleton?text=Pais&apikey=APIKEY">skeleton</a>
-<a class="collapse-item" href="/api/textpro/lava?text=Pais&apikey=APIKEY">Lava</a>
-<a class="collapse-item" href="/api/textpro/toxic?text=Pais&apikey=APIKEY">Toxic</a>
-<a class="collapse-item" href="/api/textpro/thunder?text=Pais&apikey=APIKEY">Thunder</a>
-<a class="collapse-item" href="/api/textpro/horror?text=Pais&apikey=APIKEY">Horror</a>
-<a class="collapse-item" href="/api/textpro/dropwater?text=Pais&apikey=APIKEY">Dropwater</a>
-<a class="collapse-item" href="/api/textpro/break-wall?text=Pais&apikey=APIKEY">Break-wall</a>
-<a class="collapse-item" href="/api/textpro/steel?text=Pais&text2=Gans&apikey=APIKEY">Steel</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePhoto" aria-expanded="true" aria-controls="collapseForm">
-<i class="fa fa-fw fa-font"></i>
-<span>Photooxy</span>
-</a>
-<div id="collapsePhoto" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-<div class="py-2 collapse-inner rounde">
-<h6 class="collapse-header">Photooxy Features</h6>
-<a class="collapse-item" href="/api/photooxy/love?text=pais&apikey=APIKEY">Love</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseinfo" aria-expanded="true" aria-controls="collapseForm">
-<i class="fa fa-fw fa-info"></i>
-<span>Info</span>
-</a>
-<div id="collapseinfo" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-<h6 class="collapse-header">INFORMATION</h6>
-<a class="collapse-item" href="/api/gempa?apikey=APIKEY">Gempa</a>
-<a class="collapse-item" href="/api/sholat?kota=yogyakarta&apikey=APIKEY">Jadwal Sholat</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStalk" aria-expanded="false" aria-controls="collapseTable">
-<i class="fa fa-fw fa-search-plus"></i>
-<span>Stalking</span>
-</a>
-<div id="collapseStalk" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar" style="">
-<div class="py-2 collapse-inner rounded">
-<h6 class="collapse-header">Stalk Features</h6>
-<a class="collapse-item" href="/stalk/instagram?username=fera_jelita&apikey=APIKEY">Instagram</a>
-<a class="collapse-item" href="/stalk/tiktok?q=baldybrobryzxz&apikey=APIKEY">Tiktok</a>
-<a class="collapse-item" href="/stalk/github?q=paiiss&apikey=APIKEY">Github</a>
-</div>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseoth" aria-expanded="true" aria-controls="collapseForm">
-<i class="fa fa-fw fa-feather-alt"></i>
-<span>Other</span>
-</a>
-<div id="collapseoth" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-<h6 class="collapse-header">Other Features</h6>
-<a class="collapse-item" href="/api/faker?country=en_IND&apikey=APIKEY">Faker</a>
-<a class="collapse-item" href="/api/nulis?text=pais&apikey=APIKEY">Nulis</a>
-<a class="collapse-item" href="/api/simsimi?text=hai&apikey=APIKEY">Simsimi</a>
-<a class="collapse-item" href="/html?url=https://komiku.id/&apikey=APIKEY">Html Scraper</a>
-<a class="collapse-item" href="/check?apikey=APIKEY">Check key</a>
-<a class="collapse-item" href="/api/alkitab?apikey=APIKEY">Alkitab Random</a>
-</div>
-</div>
-</li>
-<hr class="sidebar-divider">
-<div class="sidebar-heading">
-Contact ME
-</div>
-<li class="nav-item">
-<a class="nav-link" href="https://instagram.com/paiiiss_">
-<i class="fab fa-fw fa-instagram"></i>
-<span>Instagram</span>
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://wa.me/6285805609094">
-<i class="fab fa-fw fa-whatsapp"></i>
-<span>WhatsApp</span>
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://github.com/paiiss">
-<i class="fab fa-fw fa-github"></i>
-<span>Github</span>
-</a>
-</li>
+    </style><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head><body class="hold-transition skin-blue sidebar-mini"><div class="wrapper"><header class="main-header"><a href="#!" class="logo"><span class="logo-mini"><b>Yt</b></span><span class="logo-lg"><b>PublicRestAPi</b></span></a><nav class="navbar navbar-static-top" role="navigation"><a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><div class="navbar-custom-menu"><ul class="nav navbar-nav"></ul></div></nav></header><aside class="main-sidebar"><section class="sidebar"><ul class="sidebar-menu"><li class=""><a href="http://public-restapi.herokuapp.com"><i class="fa fa-home"></i> <span>Home</span></a></li><li class=""><a href="http://public-restapi.herokuapp.com/documentation"><i class="fa fa-book"></i><span>Documentation</span></a></li></ul></section></aside><div class="content-wrapper"><section class="content-header"><div class="row"><div class="col-xs-12"><ol class="breadcrumb"><li><a href="http://public-restapi.herokuapp.com"><i class="fa fa-home"></i> Home</a></li><li class="active"><a href="#!">Documentation</a></li></ol></div></div></section><section class="content"><div class="container"><div class="row"><div class="col-lg-3"><ul class="list-unstyled"><li><a href="#AnimeRandomImage">Anime Random Image</a></li><li><a href="#Animeku">Animeku</a></li><li><a href="#AvatarGenerator">Avatar Generator</a></li><li><a href="#BitlyShortener">Bitly Shortener</a></li><li><a href="#BrainlyScraper">Brainly Scraper</a></li><li><a href="#Comicast">Comicast</a></li><li><a href="#DNSLookup">DNS Lookup</a></li><li><a href="#Earthquake">Earthquake</a></li><li><a href="#EBook">EBook</a></li><li><a href="#FakeDataGenerator">Fake Data Generator</a></li><li><a href="#FreepikScraper">Freepik Scraper</a></li><li><a href="#FileInfoMediafire">File Info Mediafire</a></li><li><a href="#GetYoutubeVideoLink">Get Youtube Video Link</a></li><li><a href="#GetInstagramMediaLink">Get Instagram Media Link</a></li><li><a href="#GetFacebookVideoLink">Get Facebook Video Link</a></li><li><a href="#GithubUser">Github User</a></li><li><a href="#GoogleScraper">Google Scraper</a></li><li><a href="#HighlightCode">Highlight Code</a></li><li><a href="#HtmlViewer">Html Viewer</a></li><li><a href="#ImageScraper">Image Scraper</a></li><li><a href="#InstagramUser">Instagram User</a></li><li><a href="#IndonesianTerritory">Indonesian Territory</a></li><li><a href="#IPGeolocation">IP Geolocation</a></li><li><a href="#ImageRandom">Image Random</a></li><li><a href="#JooxMusic">Joox Music</a></li><li><a href="#MyPublicIP">My Public IP</a></li><li><a href="#PortScanner">Port Scanner</a></li><li><a href="#PrankCallGreaterJakarta">Prank Call Greater Jakarta</a></li><li><a href="#QuoteGenerator">Quote Generator</a></li><li><a href="#SimSimi">Sim Simi</a></li><li><a href="#Translate">Translate</a> </a></li><li><a href="#WebPageScannerInfo">Web Page Scanner Info</a></li><li><a href="#WebPageScreenshot">Web Page Screenshot</a></li><li><a href="#Weather">Weather 2</a></li><li><a href="#WikiPedia">Wiki Pedia</a></li></ul></div><div class="col-lg-9"><div class="row"><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#AnimeRandomImage" id="AnimeRandomImage">#</a> <span
+                                        style="font-weight: bold">Anime Random Image</span></h4><p>Random gambar anime.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/anime-random-image"
+                                        readonly></div></div><div class=""><code><pre>
+### Example Response ###
+{
+    &quot;image&quot;: &quot;https://cdn.discordapp.com/attachments/688526480069885997/688608696250662942/AmistaAnime.jpg&quot;
+}                                    </pre></code></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#Animeku" id="Animeku">#</a> <span
+                                        style="font-weight: bold">Animeku</span></h4><label for="">Cari video</label><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/animeku/search"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Kata kunci</td></tr></tbody></table></div></div><label for="">Dapatkan episode anime.</label><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/animeku/episode"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>slug</td><td>string</td><td>Yes</td><td>Slug anime</td></tr></tbody></table></div></div><label for="">Dapatkan link video.</label><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/animeku/video"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>episode_slug</td><td>string</td><td>Yes</td><td>Slug epidode anime</td></tr></tbody></table></div></div></div><div class=""><code><pre>
+### Example Response ###
 
-<hr class="sidebar-divider">
-<div class="version">version 0.2</div>
-</ul>
-<hr class="sidebar-divider">
+GET http://public-restapi.herokuapp.com/api/animeku/search?q=naruto
 
-</ul>
-
-<div id="content-wrapper" class="d-flex flex-column">
-<div id="content">
-
-<nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
-<button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-<i class="fa fa-bars" style='color:#363636;'></i>
-</button>
-<ul class="navbar-nav ml-auto">
-<li class="nav-item dropdown no-arrow">
-<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<span class="ml-2 d-none d-lg-inline text-dark small">
-<marquee class="marquee" scrolldelay="50">🚂Selamat datang di situs saya | ยินดีต้อนรับสู่เว็บไซต์ของเรา | Добро пожаловать на наш сайт | Welcome to our website | Web sitemize hoşgeldiniz | Willkommen auf unserer Webseite 💨</marquee>
-</span>
-</a>
-</li>
-<li class="nav-item dropdown no-arrow">
-<a class="nav-link dropdown-toggle" href="#" id="JamNav" role="button" data-toggle="modal" aria-haspopup="true" aria-expanded="false">
-</a>
-</li>
-
-<li class="nav-item dropdown no-arrow mx-1">
-<a class="nav-link dropdown-toggle" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<i class="fa fa-bell" style='color:#363636'></i>
-<span class="badge badge-danger badge-counter">2</span>
-</a>
-<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-<h6 class="dropdown-header">
-alert Center
-</h6>
-<a class="dropdown-item d-flex align-items-center" href="#">
-<div class="mr-3">
-<div class="icon-circle bg-primary">
-<i class="fas fa-file-alt text-white"></i>
-</div>
-</div>
-<div>
-<div class="small text-gray-500">3 Februari 2021</div>
-This rest-api is used for me to study
-</div>
-</a>
-<a class="dropdown-item d-flex align-items-center">
-<div class="mr-3">
-<div class="icon-circle bg-warning">
-<i class="fas fa-exclamation-triangle text-white"></i>
-</div>
-</div>
-<div>
-<div class="small text-gray-500">3 Februari 2021</div>
-Apikey ?, chat me on wa
-</div>
-</a>
-<a class="dropdown-item text-center small text-gray-500">There are no recent messages</a>
-</div>
-</li>
-
-</ul>
-</nav>
-
-
-<div class="container-fluid" id="container-wrapper">
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
- <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-<ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="./">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-</ol>
-</div>
-<div class="row mb-3">
-
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card h-100">
-<div class="card-body">
-<div class="row align-items-center">
-<div class="col mr-2">
-<div class="text-xs font-weight-bold text-uppercase mb-1">Hit</div>
-<div class="h5 mb-0 font-weight-bold text-gray-800" id="hite">15000</div>
-<div class="mt-2 mb-0 text-muted text-xs">
-<span>Total hit /api</span>
-</div>
-</div>
-<div class="col-auto">
-<i class="fas fa-hand-pointer fa-2x text-primary"></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card h-100">
-<div class="card-body">
-<div class="row no-gutters align-items-center">
-<div class="col mr-2">
-<div class="text-xs font-weight-bold text-uppercase mb-1">Visitor</div>
-<div class="h5 mb-0 font-weight-bold text-gray-800">
-<div class="visitor" id="visitor">10000</div>
-</div>
-<div class="mt-2 mb-0 text-muted text-xs">
-
-</span>
-<span>Yang liat-liat ga jelas :'v</span>
-</div>
-</div>
-<div class="col-auto">
-<i class="fas fa-eye fa-2x text-primary"></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card h-100">
-<div class="card-body">
-<div class="row no-gutters align-items-center">
-<div class="col mr-2">
-<div class="text-xs font-weight-bold text-uppercase mb-1">Ip</div>
-<div class="h5 mb-0 font-weight-bold text-gray-800">
-<div class="" id="ipek">00.00.00.00</div>
-</div>
-<div class="mt-2 mb-0 text-muted text-xs">
-</span>
-<span>Ip kamu</span>
-</div>
-</div>
-<div class="col-auto">
-<i class="fas fa-signal fa-2x text-primary"></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card h-100">
-<div class="card-body">
-<div class="row no-gutters align-items-center">
-<div class="col mr-2">
-<div class="text-xs font-weight-bold text-uppercase mb-1">Ip Connect</div>
-<div class="h5 mb-0 font-weight-bold text-gray-800">
-<div class="" id="cone">200</div>
-</div>
-<div class="mt-2 mb-0 text-muted text-xs">
-</span>
-<span>Ip yang pernah ada :v</span>
-</div>
-</div>
- <div class="col-auto">
-<i class="fas fa-code fa-2x text-primary"></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="demo" class="alert alert-light alert-dismissible" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-<script>
-arrBulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-var txt = "";
-txt += "<p><b>Browser CodeName</b>: " + navigator.appCodeName + "</p>";
-txt += "<p><b>Browser Name</b>: " + navigator.appName + "</p>";
-txt += "<p><b>Cookies Enabled</b>: " + navigator.cookieEnabled + "</p>";
-txt += "<p><b>Browser Online</b>: " + navigator.onLine + "</p>";
-txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
-txt += "<p><b>User-agent header</b>: " + navigator.userAgent + "</p>";
-var d = new Date();
-const jam = d.getHours();
-const menit = d.getMinutes();
-const detik = d.getSeconds();
-const tgl = d.getDate();
-const bln = d.getMonth();
-const thn = d.getFullYear();
-const bulan = arrBulan[bln]
-/* if (jam > 1 && jam < 11) {
-* view.innerHTML = 'Selamat pagi :)';
-* } else if (jam > 11 && < 15) {
-* view.innerHTML = 'Selamat siang :)';
-* } else if (jam > 15 && < 18) {
-* view.innerHTML = 'Selamat sore :)';
-* } else if (jam > 18 && < 24) {
-* view.innerHTML = 'Selamat malam'
-* } else {
-* view.innerHTML = 'Selamat datang:)'
-* }
-*/
-document.write(txt)
-document.write("Date : "+ jam +":"+ menit +":"+ detik +"~"+ tgl +"-"+ bulan +"-"+ thn +"<br>Welcome back!")
-</script>
-</div>
-
-
-</tbody>
-</table>
-</div>
-<div class="card-footer"></div>
-</div>
-</div> -->
-
-
-
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">×</span>
-</button>
-</div>
-<div class="modal-body">
-<p>Are you sure you want to logout?</p>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-<a href="login.html" class="btn btn-primary">Logout</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-<footer class="sticky-footer bg-white">
-<div class="container my-auto">
-<div class="copyright text-center my-auto">
-<span>Copyright © 2021. <b>Pais</b> Made with <i class="fa fa-heart" style="color:#f73333;text-align:center;"></i> in Home</span>
-</div>
-</div>
-</footer>
-
-</div>
-</div>
-
-<a class="scroll-to-top rounded" href="#page-top">
-<i class="fa fa-chevron-up"></i>
-</a>
-<script src="https://indrijunanda.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
-<script src="https://indrijunanda.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://indrijunanda.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="https://indrijunanda.github.io/RuangAdmin/js/ruang-admin.min.js"></script>
-</body>
-<script src="./js/sci.js"></script>
-<script>
-//   window.addEventListener("click", function(event) {
-//     window.location = "https://arnz-api-production.up.railway.app/";
-// });
-
-  function getvisitor(){
-    var xhr = new XMLHttpRequest();
-    var url = 'https://arnz-api-production.up.railway.app/data';
-    xhr.onloadend = function(){
-   data = JSON.parse(this.responseText);
-document.getElementById("visitor").textContent = data.visitor
-document.getElementById("ipek").textContent = data.ip
-document.getElementById("cone").textContent = data.connectip.length
-document.getElementById("hite").textContent = data.hit
-    };
-    xhr.open("GET", url, true);
-    xhr.send();
-}
-alert('Ampu suhu\n\nMau ngehina? silahkan :)')
-</script>
-</html>
+[
+    {
+        &quot;title&quot;: &quot;Naruto: Shippuden&quot;,
+        &quot;slug&quot;: &quot;naruto-shippuuden&quot;,
+        &quot;thumbnail&quot;: &quot;https:\/\/animeku.me\/wp-content\/uploads\/2020\/11\/Naruto-Shippuuden.jpg&quot;
+    },
+    {
+        &quot;title&quot;: &quot;Naruto&quot;,
+        &quot;slug&quot;: &quot;naruto&quot;,
+        &quot;link&quot;: &quot;https:\/\/animeku.me\/anime\/naruto&quot;,
+        &quot;thumbnail&quot;: &quot;https:\/\/animeku.me\/wp-content\/uploads\/2020\/11\/Naruto.jpg&quot;
+    },
+    {
+        &quot;title&quot;: &quot;Boruto: Naruto Next Generations&quot;,
+        &quot;slug&quot;: &quot;boruto-naruto-next-generations&quot;,
+        &quot;thumbnail&quot;: &quot;https:\/\/animeku.me\/wp-content\/uploads\/2020\/11\/Boruto-Naruto-Next-Generations.jpg&quot;
+    }
+]                                    </pre></code></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#AvatarGenerator" id="AvatarGenerator">#</a> <span
+                                        style="font-weight: bold">Avatar Generator</span></h4><p>Random avatar.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/avatar-generator"
+                                        readonly></div></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>name</td><td>string</td><td>No</td><td>Nama</td></tr><tr role="row" class="odd"><td>color</td><td>string</td><td>No</td><td>Warna tulisan</td></tr><tr role="row" class="odd"><td>background</td><td>string</td><td>No</td><td>Warna backgroud</td></tr></tbody></table></div></div><div class=""><code><pre>
+&lt;!-- Example Request --&gt;
+&lt;img src=&quot;http://public-restapi.herokuapp.com/api/avatar-generator?name=RyoDev&amp;color=7F9CF5&amp;background=EBF4FF&quot; alt=&quot;Profile&quot;&gt;                                    </pre></code></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#BitlyShortener" id="BitlyShortener">#</a> <span
+                                        style="font-weight: bold">Bitly Shortener</span></h4><p>Perpendek URl.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/bitly-shortener"
+                                        readonly></div></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>long_url</td><td>string</td><td>Yes</td><td>URl yang mau di perpendek.</td></tr></tbody></table></div></div><div class=""><code><pre>
+### Example Response ###
+{
+    &quot;created_at&quot;: &quot;2020-09-08T01:05:39+0000&quot;,
+    &quot;link&quot;: &quot;https://bit.ly/2FgzeBG&quot;,
+    &quot;long_url&quot;: &quot;https://ytryo.my.id/&quot;
+}                                    </pre></code></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#BrainlyScraper" id="BrainlyScraper">#</a> <span
+                                        style="font-weight: bold">Brainly Scraper</span></h4><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/brainly-scraper"
+                                        readonly></div></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Kata kunci pencarian.</td></tr></tbody></table></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#DNSLookup" id="DNSLookup">#</a> <span
+                                        style="font-weight: bold">DNS Lookup</span></h4><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/dns-lookup"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>domain</td><td>string</td><td>Yes</td><td>Domain</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#Earthquake" id="Earthquake">#</a> <span
+                                        style="font-weight: bold">Earthquake</span></h4><p>Info gempa live.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/earthquake"
+                                        readonly></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#EBook" id="EBook">#</a> <span
+                                        style="font-weight: bold">E-Book</span></h4><p>Nyari E-book?</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/ebook" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Kata kunci</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#FakeDataGenerator" id="FakeDataGenerator">#</a> <span
+                                        style="font-weight: bold">Fake Data Generator</span></h4><p>Fake data generator.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/fake-data-generator"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Default</th><th class="sorting">Value</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>sub</td><td></td><td>name, address, ipv4, ipv6, email, userAgent, text, title,
+                                                        userName or domainName</td><td>string</td><td>Yes</td><td>Type data yang akan di generate</td></tr><tr role="row" class="odd"><td>limit</td><td>1</td><td>1 - 20</td><td>integer</td><td>No</td><td>Banyak data yang akan di generate</td></tr><tr role="row" class="odd"><td>locale</td><td>id_ID</td><td>id_ID, en_US and more</td><td>string</td><td>No</td><td>Type data yang akan di generate sesuai negara</td></tr></tbody></table></div></div><div class=""><code><pre>
+### Example Response ###
+[
+    &quot;vastuti@yahoo.com&quot;,
+    &quot;wahyu.widiastuti@setiawan.org&quot;,
+    &quot;vlatupono@mustofa.sch.id&quot;
+]                                        </pre></code></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#FreepikScraper" id="FreepikScraper">#</a> <span
+                                        style="font-weight: bold">Freepik Scraper</span></h4><p>Nyari logo design di freepik aja.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/freepik-scraper"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Kata kunci</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#FileInfoMediafire" id="FileInfoMediafire">#</a> <span
+                                        style="font-weight: bold">File Info Mediafire</span></h4><p>Info file Mediafire.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/fileinfo-mediafire"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>url</td><td>string</td><td>Yes</td><td>URl file</td></tr></tbody></table></div></div><div class=""><code><pre>
+### Example Response ###
+{
+    &quot;filename&quot;: &quot;BIGO LIVE v4.31.2 Apk Unlimited Diamond-casdiro.com.apk&quot;,
+    &quot;size&quot;: &quot;49.53MB&quot;,
+    &quot;uploaded_at&quot;: &quot;2020-03-19 02:07:37&quot;,
+    &quot;link&quot;: &quot;https:\/\/www.mediafire.com\/download_repair.php?qkey=1q9de86yjco4vf9&amp;dkey=26onhmc8hy6&amp;template=1&amp;origin=click_button&quot;
+}                                        </pre></code></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#GetYoutubeVideoLink" id="GetYoutubeVideoLink">#</a><span style="font-weight: bold">Get Youtube Video Link</span></h4><p>Ambil link video Youtube.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/get-youtube-video-link" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>url</td><td>string</td><td>Yes</td><td>URl video</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#GetInstagramMediaLink"
+                                        id="GetInstagramMediaLink">#</a> <span style="font-weight: bold">Get Instagram
+                                        Media Link</span></h4><p>Ambil link media Instagram.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/get-instagram-media-link" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>url</td><td>string</td><td>Yes</td><td>URl post</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#GetFacebookVideoLink" id="GetFacebookVideoLink">#</a><span style="font-weight: bold">Get Facebook Video Link</span></h4><p>Ambil link video Facebook.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/get-facebook-video-link" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>url</td><td>string</td><td>Yes</td><td>URl video</td></tr></tbody></table></div></div><div class=""><code><pre>
+### Example Response ###
+{
+    &quot;sd_link&quot;: &quot;https://video.fdps5-1.fna.fbcdn.net/v/t42.1790-2/120317438_1647601858746965_8598013286796337953_n.mp4?_nc_cat=108&amp;ccb=2&amp;_nc_sid=985c63&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&amp;_nc_ohc=RAXiOqrs5x0AX8re3kd&amp;_nc_ht=video.fdps5-1.fna&amp;oh=9c9c20e6675572d091c7fe44c503cefa&amp;oe=5FAAF529&quot;,
+    &quot;hd_link&quot;: &quot;https://scontent.fdps5-1.fna.fbcdn.net/v/t66.36240-6/10000000_903932320010721_1437410159349690563_n.mp4?_nc_cat=103&amp;ccb=2&amp;_nc_sid=985c63&amp;efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&amp;_nc_ohc=uVwJuWx-d4oAX9oohp9&amp;_nc_ht=scontent.fdps5-1.fna&amp;oh=46edda5f9894f6dcbab3563ecfcad527&amp;oe=5FCFD23B&quot;
+}                                        </pre></code></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#GithubUser" id="GithubUser">#</a> <span
+                                        style="font-weight: bold">Github User</span></h4><p>Lihat informasi pengguna Github.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/github-user" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>username</td><td>string</td><td>Yes</td><td>Username pengguna</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#GoogleScraper" id="GoogleScraper">#</a> <span
+                                        style="font-weight: bold">Google Scraper</span></h4><p>Google search engine.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/google-scraper"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Kata kunci</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#HighlightCode" id="HighlightCode">#</a> <span
+                                        style="font-weight: bold">Highlight Code</span></h4><p>Highlight code.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/highlight-code"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>body</td><td>string</td><td>Yes</td><td>Source code</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#HtmlViewer" id="HtmlViewer">#</a> <span
+                                        style="font-weight: bold">Html Viewer</span></h4><p>Lihat source code Html halaman website.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/html-viewer"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>url</td><td>string</td><td>Yes</td><td>Website page url</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#ImageScraper" id="ImageScraper">#</a> <span
+                                        style="font-weight: bold">Image Scraper</span></h4><p>Image scraper.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/image-scraper"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Kata kunci</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#InstagramUser" id="InstagramUser">#</a> <span
+                                        style="font-weight: bold">Instagram User</span></h4><p>Lihat informasi pengguna Instagram.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/instagram-user" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>username</td><td>string</td><td>Yes</td><td>Username pengguna</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#IndonesianTerritory" id="IndonesianTerritory">#</a><span style="font-weight: bold">Indonesian Territory</span></h4><p>Wilayah indonesia.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/indonesian-territory" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>district</td><td>string</td><td>Yes</td><td>Kecamatan.</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#IPGeolocation" id="IPGeolocation">#</a> <span
+                                        style="font-weight: bold">IP Geolocation</span></h4><p>Lacak lokasi IP Address.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/ip-geolocation"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>ipaddress</td><td>string</td><td>Yes</td><td>IP Address atau Hostname</td></tr></tbody></table></div></div><div class=""><code><pre>
+### Example Response ###
+{
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;country&quot;: &quot;United States&quot;,
+    &quot;countryCode&quot;: &quot;US&quot;,
+    &quot;region&quot;: &quot;IL&quot;,
+    &quot;regionName&quot;: &quot;Illinois&quot;,
+    &quot;city&quot;: &quot;Chicago&quot;,
+    &quot;zip&quot;: &quot;60666&quot;,
+    &quot;lat&quot;: 41.8781,
+    &quot;lon&quot;: -87.6298,
+    &quot;timezone&quot;: &quot;America/Chicago&quot;,
+    &quot;isp&quot;: &quot;Cloudflare, Inc.&quot;,
+    &quot;org&quot;: &quot;Cloudflare, Inc.&quot;,
+    &quot;as&quot;: &quot;AS13335 Cloudflare, Inc.&quot;,
+    &quot;query&quot;: &quot;172.67.162.221&quot;
+}                                        </pre></code></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#Joox" id="JooxMusic">#</a> <span
+                                        style="font-weight: bold">Joox Music</span></h4><p>Joox music.</p><label for="">Search music</label><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/joox/search"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Nama lagu</td></tr></tbody></table></div></div><label for="">Show album detail</label><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/joox/album"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>id</td><td>string</td><td>Yes</td><td>Id album</td></tr></tbody></table></div></div><label for="">Show music detail</label><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/joox/show"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>id</td><td>string</td><td>Yes</td><td>Id musik</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#MyPublicIP" id="MyPublicIP">#</a> <span
+                                        style="font-weight: bold">My Public IP</span></h4><p>Lihat IP Public kamu.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/my-public-ip"
+                                        readonly></div></div><div class=""><code><pre>
+// Example Response
+192.168.2.1                                    </pre></code></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#PortScanner" id="PortScanner">#</a> <span
+                                        style="font-weight: bold">Port Scanner</span></h4><p>Scan port.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/port-scanner"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>hostname</td><td>string</td><td>Yes</td><td>IP Address atau Hostname</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#PrankCallGreaterJakarta"
+                                        id="PrankCallGreaterJakarta">#</a> <span style="font-weight: bold">Prank Call
+                                        Greater Jakarta</span></h4><p>Prank Call.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/prank-call" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>number</td><td>integer</td><td>Yes</td><td>Nomer telp target</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#QuoteGenerator" id="QuoteGenerator">#</a> <span
+                                        style="font-weight: bold">Quote Generator</span></h4><p>Quote generator.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/quote-generator"
+                                        readonly></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#SimSimi" id="SimSimi">#</a> <span
+                                        style="font-weight: bold">Sim Simi</span></h4><p>Ayo chat sama bot.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/sim-simi" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>text</td><td>string</td><td>No</td><td>Pesan</td></tr></tbody></table></div></div><div class=""><code><pre>
+### Example Response ###
+{
+    &quot;response&quot;: &quot;science Saya Suka simsimi simsimi simsimi lucky&quot;
+}                                        </pre></code></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#Translate" id="Translate">#</a> <span
+                                        style="font-weight: bold">Translate</span></h4><p>Text translate.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/translate"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>text</td><td>string</td><td>Yes</td><td>Text</td></tr><tr role="row" class="odd"><td>to</td><td>string</td><td>Yes</td><td>Kode bahasa</td></tr></tbody></table></div></div><div class=""><code><pre>
+### Example Response ###
+{
+    &quot;success&quot;: &quot;Hallo Dunia&quot;
+}                                        </pre></code></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#WebPageScannerInfo" id="WebPageScannerInfo">#</a><span style="font-weight: bold">Web Page Scanner Info</span></h4><p>Scan halaman web.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control"
+                                        value="http://public-restapi.herokuapp.com/api/web-page-scanner-info" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>url</td><td>string</td><td>Yes</td><td>URl halaman web yang akan di scan</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#WebPageScreenshot" id="WebPageScreenshot">#</a> <span
+                                        style="font-weight: bold">Web Page Screenshot</span></h4><p>Screenshot halaman web.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/web-page-screenshot"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Default</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>url</td><td></td><td>string</td><td>Yes</td><td>URl halaman web yang akan di screenshot</td></tr><tr role="row" class="odd"><td>no_ads</td><td>false</td><td>boolean</td><td>no</td><td>Disable ADS</td></tr><tr role="row" class="odd"><td>full_page</td><td>false</td><td>boolean</td><td>no</td><td>Fullkan tampilan halaman</td></tr><tr role="row" class="odd"><td>delay</td><td>null</td><td>integer</td><td>no</td><td>Waktu tunggu</td></tr><tr role="row" class="odd"><td>width</td><td>auto</td><td>integer</td><td>no</td><td>Lebar image</td></tr><tr role="row" class="odd"><td>height</td><td>auto</td><td>integer</td><td>no</td><td>Tinggi image</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#Weather" id="Weather">#</a> <span
+                                        style="font-weight: bold">Weather 2</span></h4><p>Info cuaca 2.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/weather" readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>territory</td><td>string</td><td>Yes</td><td>Nama Provinsi</td></tr></tbody></table></div></div></div></div><div class="col-lg-10"><div class=""><h4 class="text-primary"><a href="#WikiPedia" id="WikiPedia">#</a> <span
+                                        style="font-weight: bold">Wiki Pedia</span></h4><p>Cari informasi di wikipedia aja.</p><div class="input-group"><div class="input-group-btn"><button type="button" class="btn btn-success">GET</button></div><input type="text" class="form-control" value="http://public-restapi.herokuapp.com/api/wiki-pedia"
+                                        readonly></div><div class=""><label for="">Params</label><div class="table-responsive no-padding"><table class="table table-bordered table-hover dataTable" role="grid"><thead><tr role="row"><th class="sorting">Field</th><th class="sorting">Type</th><th class="sorting">Required</th><th class="sorting">Description</th></tr></thead><tbody><tr role="row" class="odd"><td>q</td><td>string</td><td>Yes</td><td>Kata kunci pencarian.</td></tr></tbody></table></div></div></div></div></div></div></div></div></section></div><footer class="main-footer text-center"><strong>Copyright &copy; 2019-2021 <a target="blank" href="//ytryo.my.id">RyoDev</a>.</strong></footer><div class="control-sidebar-bg"></div></div><script src="/assets/admin/bootstrap/js/bootstrap.min.js"></script><script src="/assets/admin/plugins/slimScroll/jquery.slimscroll.min.js"></script><script src="/assets/admin/plugins/fastclick/fastclick.min.js"></script><script src="/assets/admin/dist/js/app.min.js"></script><script src="/assets/admin/dist/js/demo.js"></script></body></html>
