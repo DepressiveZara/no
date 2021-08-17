@@ -290,7 +290,7 @@ router.get('/remove', (req, res, next) => {
 
 router.get('/anime-random-image', async (req, res, next) => {
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/Islamic.json`))
+       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/anime-random-image`))
         .then(response => response.json())
         .then(data => {
         var result = data;
