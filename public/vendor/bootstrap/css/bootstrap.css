@@ -7551,13 +7551,12 @@ background-color: #212121 !important;
 }
 
 .bg-img {
-  background-image: url("https://i.ibb.co/XCTVvtg/911401.jpg");
+    background-image: url("https://telegra.ph/file/a399be0eedde90626d00a.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
   background-attachment: fixed;
   height: 100%;
-  overflow-x: hidden
 }
 
 .bg-dark2 {
