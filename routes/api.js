@@ -288,6 +288,21 @@ router.get('/remove', (req, res, next) => {
     }
 })
 
+router.get('/anime-random-image', async (req, res, next) => {
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/Islamic.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
 router.get('/photooxy/shadow', async (req, res, next) => {
              var text = req.query.text;
    
