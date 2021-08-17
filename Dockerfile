@@ -1,7 +1,7 @@
 FROM buildkite/puppeteer:latest
 
 RUN apt update
-RUN apt upgrade
+RUN apt upgrade -y
 
 WORKDIR /app
 COPY . /app
