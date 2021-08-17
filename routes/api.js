@@ -288,9 +288,25 @@ router.get('/remove', (req, res, next) => {
     }
 })
 
+
 router.get('/anime/random', async (req, res, next) => {
 
        fetch(encodeURI(`http://public-restapi.herokuapp.com/api/anime-random-image`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/infogempa', async (req, res, next) => {
+
+       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/earthquake`))
         .then(response => response.json())
         .then(data => {
         var result = data;
