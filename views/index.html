@@ -1,573 +1,551 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A REST APIs website that provides a wide variety of features for developers.">
-    <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate">
-    <meta name="author" content="LoL Human">
-    <title>LoL Human - REST APIs</title>
-    <meta property="og:site_name" name="og:site_name" content="LoL Human APIs">
-    <meta property="og:title" name="og:title" content="LoL Human - REST APIs">
-    <meta property="og:url" name="og:url" content="https://api.lolhuman.xyz/">
-    <meta property="og:image" name="og:image" content="/static/icon/android-icon-192x192.png">
-    <meta property="og:description" name="og:description" content="A REST APIs website that provides a wide variety of features for developers.">
-    <link rel="apple-touch-icon" sizes="57x57" href="/static/icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/static/icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static/icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static/icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/icon/apple-icon-180x180.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="/static/icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/icon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/icon/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/static/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://api.lolhuman.xyz/">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/css/nucleo-icons.css">
-    <link rel="stylesheet" href="/static/fontawesome5/css/all.min.css">
-    <link rel="stylesheet" href="/static/flaticon/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="/static/css/black-dashboard.min.css">
-    <link rel="stylesheet" href="/static/css/style.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="ARNZ™ REST API">
+<meta name="author" content="ARI">
+<link href="https://telegra.ph/file/3b27c04b1c1fa2962f5cf.jpg" rel="icon">
+<title>ARNZ™</title>
+
+<link rel="stylesheet" href="./css/font-awesome.css">
+<link rel="stylesheet" href="./static/css/ruang-admin.min.css" />
+<link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/style">
+<link href="https://indrijunanda.github.io/RuangAdmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://argon-dashboard-flask.creative-tim.com/static/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+
 </head>
+<body id="page-top" onload="getvisitor();">
+<div id="wrapper">
 
-<body class="dark-mode" data-background-color="dark">
-    <div class="wrapper">
-        <div class="sidebar">
-            <div class="sidebar-wrapper card-round">
-                <div class="logo text-center">
-                    <a href="/" class="simple-text logo-normal" style="font-size: large;">
-                        LoL Human APIs
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li class="active" >
-                        <a href="/docs">
-                            <i class="fi-rr-cookie"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/pricing">
-                            <i class="fi-rr-money"></i>
-                            <p>Pricing</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/changelog">
-                            <i class="fi-rr-refresh"></i>
-                            <p>Changelog</p>
-                        </a>
-                    </li>
-                    <hr>
-                    <li >
-                        <a href="/docs/islami">
-                            <i class="far fa-quran"></i>
-                            <p>Islami</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/downloader">
-                            <i class="fi-rr-download"></i>
-                            <p>Downloader</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/movie">
-                            <i class="fi-rr-video-camera"></i>
-                            <p>Movie & Story</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/textprome">
-                            <i class="fi-rr-text"></i>
-                            <p>Text Pro Me</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/photooxy">
-                            <i class="fi-rr-camera"></i>
-                            <p>Photo Oxy</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/ephoto">
-                            <i class="fi-rr-cursor-text"></i>
-                            <p>Ephoto 360</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/searching">
-                            <i class="fi-rr-search-alt"></i>
-                            <p>Searching</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/randomimage">
-                            <i class="fi-rr-gallery"></i>
-                            <p>Random Image</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/randomtext">
-                            <i class="fi-rr-align-center"></i>
-                            <p>Random Text</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/animanga">
-                            <i class="fi-rr-crown"></i>
-                            <p>AniManga</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/information">
-                            <i class="fi-rr-info"></i>
-                            <p>Information</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/news">
-                            <i class="fal fa-newspaper"></i>
-                            <p>News</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/meme">
-                            <i class="fab fa-themeisle"></i>
-                            <p>Meme</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/entertainment">
-                            <i class="fal fa-smile"></i>
-                            <p>Entertainment</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/game">
-                            <i class="fal fa-gamepad-alt"></i>
-                            <p>Game</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/photoeditor">
-                            <i class="fi-rr-fill"></i>
-                            <p>Photo Editor</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/creator">
-                            <i class="fi-rr-magic-wand"></i>
-                            <p>Creator</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/converter">
-                            <i class="fal fa-recycle"></i>
-                            <p>Converter</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/primbon">
-                            <i class="fi-rr-password"></i>
-                            <p>Primbon</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/docs/stalking">
-                            <i class="fi-rr-stats"></i>
-                            <p>Stalking</p>
-                        </a>
-                    </li>
-                    <li style="margin-bottom: 8rem !important;" >
-                        <a href="/docs/other">
-                            <i class="fi-rr-tooth"></i>
-                            <p>Other</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-panel">
-            <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
-                <div class="container-fluid">
-                    <div class="navbar-wrapper">
-                        <div class="navbar-toggle d-inline">
-                            <button type="button" class="navbar-toggler">
-                                <span class="navbar-toggler-bar bar1"></span>
-                                <span class="navbar-toggler-bar bar2"></span>
-                                <span class="navbar-toggler-bar bar3"></span>
-                            </button>
-                        </div>
-                        <a class="navbar-brand" href="#">Dashboard</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-bar navbar-kebab"></span>
-                        <span class="navbar-toggler-bar navbar-kebab"></span>
-                        <span class="navbar-toggler-bar navbar-kebab"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navigation">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown no-arrow">
-                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="tim-icons icon-zoom-split"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-search p-3 shadow animated--grow-in dark-color" aria-labelledby="searchDropdown" style="border: none;">
-                                    <form class="navbar-search" action="/search" method="GET">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <button class="input-group-text" type="submit">
-                                                    <i class="tim-icons icon-zoom-split"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" class="form-control" name="q" placeholder="Search" autocomplete="off" required>
-                                        </div>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="dropdown nav-item">
-                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <div class="photo">
-                                        <img src="https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg" alt="Profile Photo">
-                                    </div>
-                                    <b class="caret d-none d-lg-block d-xl-block"></b>
-                                    <p class="d-lg-none">
-                                        Guest
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu dropdown-navbar dropdown-user">
-                                    <div class="dropdown-user-scroll scrollbar-outer">
-                                        <li>
-                                            <div class="user-box">
-                                                <div class="avatar-lg"><img src="https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg" alt="image profile" class="avatar-img rounded"></div>
-                                                <div class="u-text">
-                                                    <h4>Guest</h4>
-                                                    <p class="text-muted"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c3a4b6a6b0b783afacafabb6aea2adedbbbab9">[email&#160;protected]</a></p><a href="/profile" class="btn btn-xs btn-primary btn-sm">View Profile</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="/login">Login</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="/register">Register</a> 
-                                        </li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="separator d-lg-none"></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="content">
-                
-<div class="row row-card-no-pd mt--2">
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-eye text-primary"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">Visitor</p>
-                            <h4 class="card-title" id="visitor">
-                                121027
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-user text-danger"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">User</p>
-                            <h4 class="card-title" id="user">
-                                3206
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-shopping-cart text-success"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">Requests</p>
-                            <h4 class="card-title" id="requests">
-                                5240458
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-time-twenty-four text-warning"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">Today</p>
-                            <h4 class="card-title" id="requests_today">
-                                26194
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+<div class="sidebar-brand-text mx-3">Pais</div>
+</a>
+<hr class="sidebar-divider my-0">
+<li class="nav-item">
+<a class="nav-link" href="#">
+<i class="fa fa-code" aria-hidden="true"></i>
+<span> Document</span></a>
+</li>
+<hr class="sidebar-divider">
+<div class="sidebar-heading">
+Features
 </div>
-<div class="row row-card-no-pd mt--2">
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-settings-sliders text-warning"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">Features</p>
-                            <h4 class="card-title">615</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-check text-success"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">Active</p>
-                            <h4 class="card-title">
-                                615
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-cross-circle text-danger"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">Error</p>
-                            <h4 class="card-title">
-                                0
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-round">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="icon-big text-center">
-                            <i class="fi-rr-time-twenty-four text-warning"></i>
-                        </div>
-                    </div>
-                    <div class="col-7 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">User Request</p>
-                            <h4 class="card-title" id="requests_today">
-                                Login First
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNews" aria-expanded="true" aria-controls="collapseAnime">
+<i class="fa fa-search"></i>
+<span>News API</span>
+</a>
+<div id="collapseNews" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">News Features</h6>
+<a class="collapse-item" href="/news/merdeka?apikey=APIKEY">Merdeka.com</a>
+<a class="collapse-item" href="/news/antaranews?apikey=APIKEY">AntaraNews</a>
+<a class="collapse-item" href="news/jalantikus?apikey=APIKEY">JalanTikus</a>
+<a class="collapse-item" href="/news/sjalantikus?search=pubg&apikey=APIKEY">Search JalanTikus</a>
+<a class="collapse-item" href="/api/palingmurah?apikey=APIKEY">Paling Murah</a>
+<a class="collapse-item" href="/api/shopee?search=madu&apikey=APIKEY">Shopee</a>
+<a class="collapse-item" href="/api/flashsale?apikey=APIKEY">Flashsale-Shopee</a>
 </div>
-<div class="row mt--2">
-    <div class="col-sm-12 col-md-12">
-        <div class="card card-stats card-round">
-            <div class="card-header">
-                <h3 style="margin-bottom: 0">
-                    <i class="fas fa-ruler text-danger"></i> S&K
-                </h3>
-            </div>
-            <div class="card-body mb-3">
-                <ol>
-                    <li>Jangan flooding requests.</li>
-                    <li>
-                        Membuat banyak akun pada IP yang sama maka IP otomatis akan di block.
-                    </li>
-                    <li>
-                        Owner dapat sewaktu waktu mengubah ketentuan di website ini, demi menjaga kualitas website.
-                    </li>
-                    <li>
-                        Dilarang keras untuk menyebarkan apikey Anda, jika ketahuan. InsyaAllah akan di block :)
-                    </li>
-                    <li>Jangan ditembak atuh, sakit.</li>
-                    <li>
-                        Owner tidak bertanggung jawab atas apa yang Anda lakukan dalam penggunaan website ini.
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
 </div>
-<div class="row mt--2">
-    <div class="col-sm-12 col-md-6">
-        <div class="card card-stats card-round">
-            <div class="card-header">
-                <h3 style="margin-bottom: 0">
-                    <i class="fal fa-sparkles text-success"></i> Thanks To
-                </h3>
-            </div>
-            <div class="card-body mb-2">
-                <ul>
-                    <li>Allah SWT.</li>
-                    <li>My Parents</li>
-                    <li>My Friends</li>
-                    <li>Heroku</li>
-                    <li>Mat</li>
-                    <li>Pais</li>
-                    <li>Ben</li>
-                    <li>Faiz</li>
-                    <li>Kee</li>
-                    <li>Krypton Byte</li>
-                    <li>Chipa</li>
-                    <li>ArugaZ</li>
-                    <li>Bang Hasan</li>
-                    <li>
-                        And all of you who have used the web wisely and always supported me.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-6">
-        <div class="card card-stats card-round">
-            <div class="card-header">
-                <h3 style="margin-bottom: 0">
-                    <i class="fi-rr-headset text-warning"></i> Contact Me
-                </h3>
-            </div>
-            <div class="card-body mb-2">
-                <p>Hello, Everyone!</p>
-                <ul>
-                    <li>Interested in buying Premium or VIP?</li>
-                    <li>Found 1 or more bugs?</li>
-                    <li>Request Features?</li>
-                </ul>
-                <p>You can contact me via</p>
-                <p>
-                    <a href="https://wa.me/62895418200111" class="text-white">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                </p>
-                <p>
-                    <a href="https://t.me/LoLHumen" class="text-white">
-                        <i class="fab fa-telegram-plane"></i> Telegram
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.instagram.com/lolhuman.xyz/" class="text-white">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDownload" aria-expanded="true" aria-controls="collapseAnime">
+<i class="fas fa-fw fa-arrow-down"></i>
+<span>Downloader API</span>
+</a>
+<div id="collapseDownload" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Downloader Features</h6>
+<a class="collapse-item" href="/download/joox?search=see%20you%20again&apikey=APIKEY">Joox</a>
+<a class="collapse-item" href="/api/ig?url=https://www.instagram.com/p/CLSIkIOh0ad/?utm_source=ig_web_copy_link&apikey=APIKEY">Instagram</a>
+<a class="collapse-item" href="/api/ytdl?link=https://www.youtube.com/watch?v=en9KJdbrZj0&start_radio=1&apikey=APIKEY">Yt Mp3 Downloader</a>
+<a class="collapse-item" href="/api/happymod?search=minicraft&apikey=APIKEY">HappyMod Search</a>
+<a class="collapse-item" href="/api/ytvideo?link=https://www.youtube.com/watch?v=en9KJdbrZj0&start_radio=1&apikey=APIKEY">Yt Mp4 Downloader</a>
 </div>
-<!-- <script>
-    setInterval(function() {
-        $.getJSON("/", function(data) {
-            $("#visitor").html(data.visitor);
-            $("#requests").html(data.requests);
-            $("#requests_today").html(data.requests_today);
-        });
-    }, 1000);
-</script> -->
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnime" aria-expanded="true" aria-controls="collapseAnime">
+<i class="fas fa-fw fa-leaf"></i>
+<span>Anime</span>
+</a>
+<div id="collapseAnime" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Anime Features</h6>
+<a class="collapse-item" href="/api/project-komikcast?apikey=APIKEY">Ongoing KomikCast</a>
+<a class="collapse-item" href="/api/ongoing-otakudesu?apikey=APIKEY">Ongoing Otakudesu</a>
+<a class="collapse-item" href="/api/trending-komiku?apikey=APIKEY">Top 1 Komiku</a>
+<a class="collapse-item" href="/api/ongoing-anoboy?apikey=APIKEY">Ongoing Anoboy</a>
+<a class="collapse-item" href="/api/anoboy-search?search=sao&apikey=APIKEY">Anoboy Search</a>
+<a class="collapse-item" href="/api/nekopoi?apikey=APIKEY">Nekopoi</a>
+<a class="collapse-item" href="/api/hentaipoi?apikey=APIKEY">Nekopoi Hn</a>
+<a class="collapse-item" href="/api/nekopoi?link=https://nekopoi.care/hentai/viper-gts&apikey=APIKEY">Nekopoi Scraper</a>
+<a class="collapse-item" href="/api/komiku?apikey=APIKEY">Komiku project</a>
+<a class="collapse-item" href="/api/anitoki?apikey=APIKEY">Anitoki Last Update</a>
+<a class="collapse-item" href="/api/komikus?search=my%20wife&apikey=APIKEY">Komiku Search</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRandom" aria-expanded="false" aria-controls="collapseRandom">
+<i class="fas fa-fw fa-bullseye"></i>
+<span>Random API</span>
+</a>
+<div id="collapseRandom" class="collapse" aria-labelledby="headingRandom" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Random Features</h6>
+<a class="collapse-item" href="/api/pantun?apikey=APIKEY">Pantun</a>
+<a class="collapse-item" href="/api/asupan?apikey=APIKEY">Video ptl</a>
+<a class="collapse-item" href="/api/chika?apikey=APIKEY">Vide Chika</a>
+<a class="collapse-item" href="/api/cita-cita?apikey=APIKEY">Cita-cita Winda</a>
+<a class="collapse-item" href="/api/neko?apikey=APIKEY">Neko (anime)</a>
+<a class="collapse-item" href="/api/hentai?apikey=APIKEY">Hentai (anime)</a>
+<a class="collapse-item" href="/api/blow?apikey=APIKEY">Blow (anime)</a>
+<a class="collapse-item" href="/api/neko?apikey=APIKEY">Nsfw Neko (anime)</a>
+<a class="collapse-item" href="/api/truthid?apikey=APIKEY">Truth-Ind</a>
+<a class="collapse-item" href="/api/truthen?apikey=APIKEY">Truth-Eng</a>
+<a class="collapse-item" href="/api/dareid?apikey=APIKEY">Dare-Ind</a>
+<a class="collapse-item" href="/api/dareen?apikey=APIKEY">Dare-Eng</a>
+<a class="collapse-item" href="/api/motivasi?apikey=APIKEY">Motivasi Hidup</a>
+<a class="collapse-item" href="/api/bts?apikey=APIKEY">Image BTS</a>
+<a class="collapse-item" href="/api/exo?apikey=APIKEY">Image EXO</a>
+<a class="collapse-item" href="/api/blackpink?apikey=APIKEY">Image Black Pink</a>
+<a class="collapse-item" href="/api/faktaunik?apikey=APIKEY">Fakta Unik</a>
+<a class="collapse-item" href="/api/katabijak?apikey=APIKEY">Kata bijak</a>
+<a class="collapse-item" href="/api/katasenja?apikey=APIKEY">Kata Senja</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true" aria-controls="collapseForm">
+<i class="fa fa-book"></i>
+<span>Educational API</span>
+</a>
+<div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Educational Features</h6>
+<a class="collapse-item" href="/kbbi?kata=membaca">KBBI</a>
+<a class="collapse-item" href="/api/simsimii?text=simi%20cantik?&apikey=APIKEY">Sim Simi</a>
+<a class="collapse-item" href="/api/brainly?search=cara%20buat%20nasi&apikey=APIKEY">Brainly</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTextPro" aria-expanded="true" aria-controls="collapseForm">
+<i class="fa fa-fw fa-font"></i>
+<span>Text Pro Me</span>
+</a>
+<div id="collapseTextPro" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+<div class="py-2 collapse-inner rounded">
+<h6 class="collapse-header">Textprome Features</h6>
+<a class="collapse-item" href="/api/textpro/blackpink?text=pais&apikey=APIKEY">Blackpink</a>
+<a class="collapse-item" href="/api/textpro/matrix?text=pais&apikey=APIKEY">Matrix</a>
+<a class="collapse-item" href="/api/textpro/graffiti?text=Pais&text2=Gans&apikey=APIKEY">Graffiti</a>
+<a class="collapse-item" href="/api/textpro/phub?text=Pais&text2=Gans&apikey=APIKEY">Logo PHub</a>
+<a class="collapse-item" href="/api/textpro/christmas?text=Pais&apikey=APIKEY">Christmas</a>
+<a class="collapse-item" href="/api/textpro/winter?text=Pais&apikey=APIKEY">Winter</a>
+<a class="collapse-item" href="/api/textpro/sky?text=Pais&apikey=APIKEY">Sky</a>
+<a class="collapse-item" href="/api/textpro/luxury?text=Pais&apikey=APIKEY">Luxury</a>
+<a class="collapse-item" href="/api/textpro/gradient?text=Pais&apikey=APIKEY">Gradient</a>
+<a class="collapse-item" href="/api/textpro/vintage?text=Pais&apikey=APIKEY">Vintage</a>
+<a class="collapse-item" href="/api/textpro/beach?text=Pais&apikey=APIKEY">Beach</a>
+<a class="collapse-item" href="/api/textpro/sand-writing?text=Pais&apikey=APIKEY">Sand-writing</a>
+<a class="collapse-item" href="/api/textpro/sand-engraved?text=Pais&apikey=APIKEY">Sand-engraved</a>
+<a class="collapse-item" href="/api/textpro/glue-text?text=Pais&apikey=APIKEY">Glue-text</a>
+<a class="collapse-item" href="/api/textpro/summery-sand?text=Pais&apikey=APIKEY">Summery-sand</a>
+<a class="collapse-item" href="/api/textpro/space-3d?text=Pais&text2=Gans&apikey=APIKEY">Space-3d</a>
+<a class="collapse-item" href="/api/textpro/metal-dark?text=Pais&apikey=APIKEY">Metal-dark</a>
+<a class="collapse-item" href="/api/textpro/glitch-text?text=Pais&text2=Gans&apikey=APIKEY">Glitch-text</a>
+<a class="collapse-item" href="/api/textpro/stone-text?text=Pais&text2=Gans&apikey=APIKEY">Stone-text</a>
+<a class="collapse-item" href="/api/textpro/neon-light?text=Pais&apikey=APIKEY">Neon-light</a>
+<a class="collapse-item" href="/api/textpro/1917-style?text=Pais&apikey=APIKEY">1917-style</a>
+<a class="collapse-item" href="/api/textpro/minion-text?text=Pais&apikey=APIKEY">Minion-text</a>
+<a class="collapse-item" href="/api/textpro/holographic-3d?text=Pais&apikey=APIKEY">Holographic-3d</a>
+<a class="collapse-item" href="/api/textpro/metal-purple?text=Pais&apikey=APIKEY">Metal-purple</a>
+<a class="collapse-item" href="/api/textpro/deluxe-silver?text=Pais&apikey=APIKEY">Deluxe-silver</a>
+<a class="collapse-item" href="/api/textpro/avengers-logo?text=Pais&text2=Gans&apikey=APIKEY">Avengers-logo</a>
+<a class="collapse-item" href="/api/textpro/marvel-studios?text=Pais&text2=Gans&apikey=APIKEY">Marvel-studios</a>
+<a class="collapse-item" href="/api/textpro/marvel-studios2?text=Pais&text2=Gans&apikey=APIKEY">Marvel-studios2</a>
+<a class="collapse-item" href="/api/textpro/glossy-blue?text=Pais&apikey=APIKEY">Glossy-blue</a>
+<a class="collapse-item" href="/api/textpro/deluxe-gold?text=Pais&apikey=APIKEY">Deluxe-gold</a>
+<a class="collapse-item" href="/api/textpro/glossy-carbon?text=Pais&apikey=APIKEY">Glossy-carbon</a>
+<a class="collapse-item" href="/api/textpro/xmas?text=Pais&apikey=APIKEY">Xmas</a>
+<a class="collapse-item" href="/api/textpro/blood?text=Pais&apikey=APIKEY">Blood</a>
+<a class="collapse-item" href="/api/textpro/halloween?text=Pais&apikey=APIKEY">Halloween</a>
+<a class="collapse-item" href="/api/textpro/wolf?text=Pais&text2=Gans&apikey=APIKEY">Wolf</a>
+<a class="collapse-item" href="/api/textpro/wolf2?text=Pais&text2=Gans&apikey=APIKEY">Wolf2</a>
+<a class="collapse-item" href="/api/textpro/lion?text=Pais&text2=Gans&apikey=APIKEY">Lion</a>
+<a class="collapse-item" href="/api/textpro/ninja?text=Pais&text2=Gans&apikey=APIKEY">Ninja</a>
+<a class="collapse-item" href="/api/textpro/joker?text=Pais&apikey=APIKEY">Joker</a>
+<a class="collapse-item" href="/api/textpro/wicker?text=Pais&apikey=APIKEY">Wicker</a>
+<a class="collapse-item" href="/api/textpro/leaves?text=Pais&apikey=APIKEY">Leaves</a>
+<a class="collapse-item" href="/api/textpro/firework?text=Pais&apikey=APIKEY">Firework</a>
+<a class="collapse-item" href="/api/textpro/skeleton?text=Pais&apikey=APIKEY">skeleton</a>
+<a class="collapse-item" href="/api/textpro/lava?text=Pais&apikey=APIKEY">Lava</a>
+<a class="collapse-item" href="/api/textpro/toxic?text=Pais&apikey=APIKEY">Toxic</a>
+<a class="collapse-item" href="/api/textpro/thunder?text=Pais&apikey=APIKEY">Thunder</a>
+<a class="collapse-item" href="/api/textpro/horror?text=Pais&apikey=APIKEY">Horror</a>
+<a class="collapse-item" href="/api/textpro/dropwater?text=Pais&apikey=APIKEY">Dropwater</a>
+<a class="collapse-item" href="/api/textpro/break-wall?text=Pais&apikey=APIKEY">Break-wall</a>
+<a class="collapse-item" href="/api/textpro/steel?text=Pais&text2=Gans&apikey=APIKEY">Steel</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePhoto" aria-expanded="true" aria-controls="collapseForm">
+<i class="fa fa-fw fa-font"></i>
+<span>Photooxy</span>
+</a>
+<div id="collapsePhoto" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+<div class="py-2 collapse-inner rounde">
+<h6 class="collapse-header">Photooxy Features</h6>
+<a class="collapse-item" href="/api/photooxy/love?text=pais&apikey=APIKEY">Love</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseinfo" aria-expanded="true" aria-controls="collapseForm">
+<i class="fa fa-fw fa-info"></i>
+<span>Info</span>
+</a>
+<div id="collapseinfo" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">INFORMATION</h6>
+<a class="collapse-item" href="/api/gempa?apikey=APIKEY">Gempa</a>
+<a class="collapse-item" href="/api/sholat?kota=yogyakarta&apikey=APIKEY">Jadwal Sholat</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStalk" aria-expanded="false" aria-controls="collapseTable">
+<i class="fa fa-fw fa-search-plus"></i>
+<span>Stalking</span>
+</a>
+<div id="collapseStalk" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar" style="">
+<div class="py-2 collapse-inner rounded">
+<h6 class="collapse-header">Stalk Features</h6>
+<a class="collapse-item" href="/stalk/instagram?username=fera_jelita&apikey=APIKEY">Instagram</a>
+<a class="collapse-item" href="/stalk/tiktok?q=baldybrobryzxz&apikey=APIKEY">Tiktok</a>
+<a class="collapse-item" href="/stalk/github?q=paiiss&apikey=APIKEY">Github</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseoth" aria-expanded="true" aria-controls="collapseForm">
+<i class="fa fa-fw fa-feather-alt"></i>
+<span>Other</span>
+</a>
+<div id="collapseoth" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Other Features</h6>
+<a class="collapse-item" href="/api/faker?country=en_IND&apikey=APIKEY">Faker</a>
+<a class="collapse-item" href="/api/nulis?text=pais&apikey=APIKEY">Nulis</a>
+<a class="collapse-item" href="/api/simsimi?text=hai&apikey=APIKEY">Simsimi</a>
+<a class="collapse-item" href="/html?url=https://komiku.id/&apikey=APIKEY">Html Scraper</a>
+<a class="collapse-item" href="/check?apikey=APIKEY">Check key</a>
+<a class="collapse-item" href="/api/alkitab?apikey=APIKEY">Alkitab Random</a>
+</div>
+</div>
+</li>
+<hr class="sidebar-divider">
+<div class="sidebar-heading">
+Contact ME
+</div>
+<li class="nav-item">
+<a class="nav-link" href="https://instagram.com/paiiiss_">
+<i class="fab fa-fw fa-instagram"></i>
+<span>Instagram</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://wa.me/6285805609094">
+<i class="fab fa-fw fa-whatsapp"></i>
+<span>WhatsApp</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/paiiss">
+<i class="fab fa-fw fa-github"></i>
+<span>Github</span>
+</a>
+</li>
 
-            </div>
-            <footer class="footer fixed-bottom">
-                <div class="copyright text-center my-auto">
-                    Made with <i class="fa fa-heart"></i> by
-                    <a href="https://t.me/LoLHumen" target="_blank" rel="nofollow">LoL Human</a>
-                    </span>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/static/js/core/jquery.min.js"></script>
-    <script src="/static/js/core/popper.min.js"></script>
-    <script src="/static/js/core/bootstrap.min.js"></script>
-    <script src="/static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/static/js/plugins/bootstrap-notify.js"></script>
-    <script src="/static/js/black-dashboard.min.js"></script>
-    <script src="/static/js/script.js"></script>
+<hr class="sidebar-divider">
+<div class="version">version 0.2</div>
+</ul>
+<hr class="sidebar-divider">
+
+</ul>
+
+<div id="content-wrapper" class="d-flex flex-column">
+<div id="content">
+
+<nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+<button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+<i class="fa fa-bars" style='color:#363636;'></i>
+</button>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown no-arrow">
+<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="ml-2 d-none d-lg-inline text-dark small">
+<marquee class="marquee" scrolldelay="50">🚂Selamat datang di situs saya | ยินดีต้อนรับสู่เว็บไซต์ของเรา | Добро пожаловать на наш сайт | Welcome to our website | Web sitemize hoşgeldiniz | Willkommen auf unserer Webseite 💨</marquee>
+</span>
+</a>
+</li>
+<li class="nav-item dropdown no-arrow">
+<a class="nav-link dropdown-toggle" href="#" id="JamNav" role="button" data-toggle="modal" aria-haspopup="true" aria-expanded="false">
+</a>
+</li>
+
+<li class="nav-item dropdown no-arrow mx-1">
+<a class="nav-link dropdown-toggle" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fa fa-bell" style='color:#363636'></i>
+<span class="badge badge-danger badge-counter">2</span>
+</a>
+<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+<h6 class="dropdown-header">
+alert Center
+</h6>
+<a class="dropdown-item d-flex align-items-center" href="#">
+<div class="mr-3">
+<div class="icon-circle bg-primary">
+<i class="fas fa-file-alt text-white"></i>
+</div>
+</div>
+<div>
+<div class="small text-gray-500">3 Februari 2021</div>
+This rest-api is used for me to study
+</div>
+</a>
+<a class="dropdown-item d-flex align-items-center">
+<div class="mr-3">
+<div class="icon-circle bg-warning">
+<i class="fas fa-exclamation-triangle text-white"></i>
+</div>
+</div>
+<div>
+<div class="small text-gray-500">3 Februari 2021</div>
+Apikey ?, chat me on wa
+</div>
+</a>
+<a class="dropdown-item text-center small text-gray-500">There are no recent messages</a>
+</div>
+</li>
+
+</ul>
+</nav>
+
+
+<div class="container-fluid" id="container-wrapper">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="./">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+</ol>
+</div>
+<div class="row mb-3">
+
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Hit</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800" id="hite">15000</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+<span>Total hit /api</span>
+</div>
+</div>
+<div class="col-auto">
+<i class="fas fa-hand-pointer fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Visitor</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+<div class="visitor" id="visitor">10000</div>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+
+</span>
+<span>Yang liat-liat ga jelas :'v</span>
+</div>
+</div>
+<div class="col-auto">
+<i class="fas fa-eye fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Ip</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+<div class="" id="ipek">00.00.00.00</div>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+</span>
+<span>Ip kamu</span>
+</div>
+</div>
+<div class="col-auto">
+<i class="fas fa-signal fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<div class="text-xs font-weight-bold text-uppercase mb-1">Ip Connect</div>
+<div class="h5 mb-0 font-weight-bold text-gray-800">
+<div class="" id="cone">200</div>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+</span>
+<span>Ip yang pernah ada :v</span>
+</div>
+</div>
+ <div class="col-auto">
+<i class="fas fa-code fa-2x text-primary"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="demo" class="alert alert-light alert-dismissible" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+<script>
+arrBulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+var txt = "";
+txt += "<p><b>Browser CodeName</b>: " + navigator.appCodeName + "</p>";
+txt += "<p><b>Browser Name</b>: " + navigator.appName + "</p>";
+txt += "<p><b>Cookies Enabled</b>: " + navigator.cookieEnabled + "</p>";
+txt += "<p><b>Browser Online</b>: " + navigator.onLine + "</p>";
+txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
+txt += "<p><b>User-agent header</b>: " + navigator.userAgent + "</p>";
+var d = new Date();
+const jam = d.getHours();
+const menit = d.getMinutes();
+const detik = d.getSeconds();
+const tgl = d.getDate();
+const bln = d.getMonth();
+const thn = d.getFullYear();
+const bulan = arrBulan[bln]
+/* if (jam > 1 && jam < 11) {
+* view.innerHTML = 'Selamat pagi :)';
+* } else if (jam > 11 && < 15) {
+* view.innerHTML = 'Selamat siang :)';
+* } else if (jam > 15 && < 18) {
+* view.innerHTML = 'Selamat sore :)';
+* } else if (jam > 18 && < 24) {
+* view.innerHTML = 'Selamat malam'
+* } else {
+* view.innerHTML = 'Selamat datang:)'
+* }
+*/
+document.write(txt)
+document.write("Date : "+ jam +":"+ menit +":"+ detik +"~"+ tgl +"-"+ bulan +"-"+ thn +"<br>Welcome back!")
+</script>
+</div>
+
+
+</tbody>
+</table>
+</div>
+<div class="card-footer"></div>
+</div>
+</div> -->
+
+
+
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<p>Are you sure you want to logout?</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+<a href="login.html" class="btn btn-primary">Logout</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<footer class="sticky-footer bg-white">
+<div class="container my-auto">
+<div class="copyright text-center my-auto">
+<span>Copyright © 2021. <b>Pais</b> Made with <i class="fa fa-heart" style="color:#f73333;text-align:center;"></i> in Home</span>
+</div>
+</div>
+</footer>
+
+</div>
+</div>
+
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fa fa-chevron-up"></i>
+</a>
+<script src="https://indrijunanda.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
+<script src="https://indrijunanda.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://indrijunanda.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://indrijunanda.github.io/RuangAdmin/js/ruang-admin.min.js"></script>
 </body>
+<script src="./js/sci.js"></script>
+<script>
+//   window.addEventListener("click", function(event) {
+//     window.location = "https://arnz-api-production.up.railway.app/";
+// });
 
-</html>
-
-</html>
-
+  function getvisitor(){
+    var xhr = new XMLHttpRequest();
+    var url = 'https://arnz-api-production.up.railway.app/data';
+    xhr.onloadend = function(){
+   data = JSON.parse(this.responseText);
+document.getElementById("visitor").textContent = data.visitor
+document.getElementById("ipek").textContent = data.ip
+document.getElementById("cone").textContent = data.connectip.length
+document.getElementById("hite").textContent = data.hit
+    };
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+alert('Ampu suhu\n\nMau ngehina? silahkan :)')
+</script>
 </html>
