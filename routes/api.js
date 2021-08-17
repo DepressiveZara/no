@@ -289,7 +289,7 @@ router.get('/remove', (req, res, next) => {
 })
 
 router.get('/photooxy/grafity', async (req, res, next) => {
-             var text = req.query.text,
+             var text = req.query.text;
    
         if (!text) return res.json(loghandler.nottext)
 
