@@ -54,6 +54,12 @@ loghandler = {
         code: 406,
         message: 'masukan parameter url'
     },
+    notbahasa: {
+    	status: false,
+    creator: `${creator}`,
+    code: 406,
+    message: 'masukan kode bahasa'
+},
     notkata: {
         status: false,
         creator: `${creator}`,
@@ -288,6 +294,59 @@ router.get('/remove', (req, res, next) => {
     }
 })
 
+router.get('/html/viewer', async (req, res, next) => {
+             var url = req.query.url;
+   
+	if (!url) return res.json(loghandler.nottext)
+       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/html-viewer?url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/joox/search', async (req, res, next) => {
+             var q = req.query.q;
+   
+	if (!q) return res.json(loghandler.nottext)
+       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/joox/search?q=${q}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/translation', async (req, res, next) => {
+             var text = req.query.text,
+             to = req.query.to
+   
+	if (!text) return res.json(loghandler.nottext)
+	if (!to) return res.json(loghandler.nottext)
+       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/translate?text=${text}&to=${to}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
 
 router.get('/anime/random', async (req, res, next) => {
 
@@ -304,9 +363,26 @@ router.get('/anime/random', async (req, res, next) => {
 })
 })
 
+router.get('/web/scanner', async (req, res, next) => {
+             var url = req.query.url;
+   
+	if (!url) return res.json(loghandler.noturl)
+       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/wiki-pedia?q=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
 router.get('/infogempa', async (req, res, next) => {
 
-       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/earthquake`))
+       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/web-page-scanner-info`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -335,6 +411,7 @@ router.get('/infocuaca', async (req, res, next) => {
          	res.json(loghandler.error)
 })
 })
+
 
 router.get('/wikipedia', async (req, res, next) => {
              var q = req.query.q;
