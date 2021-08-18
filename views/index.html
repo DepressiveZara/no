@@ -13,23 +13,23 @@
     <meta name="author" content="Ari susanto">
     <link rel="icon" type="image/png" sizes="16x16" href="https://telegra.ph/file/3b27c04b1c1fa2962f5cf.jpg">
 
-    <meta property="og:title" content="Home | ARNZ™ REST API's" />
+    <meta property="og:title" content="ARNZ™ REST API's" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ARNZ™ REST API's" />
-    <meta property="og:url" content="https://arnz-api-production.up.railway.app" />
+    <meta property="og:url" content="https://arnz-api.herokuapp.com" />
     <meta property="og:image" content="https://telegra.ph/file/3b27c04b1c1fa2962f5cf.jpg" />
     <meta property="og:image:alt" content="ARNZ™ REST API's" />
 
-    <meta property="og:url" content="https://arnz-api-production.up.railway.app" />
-    <meta property="og:title" content="Home | ARNZ™ REST API's" />
+    <meta property="og:url" content="https://arnz-api.herokuapp.com" />
+    <meta property="og:title" content="ARNZ™ REST API's" />
     <meta property="og:description" content="Jelek om rest apinya sumpah ga boong :(." />
     <meta property="og:image" content="https://telegra.ph/file/3b27c04b1c1fa2962f5cf.jpg" />
 
-    <link href="https://sosmeeed.herokuapp.com/style/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://sosmeeed.herokuapp.com/style/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-    <link href="https://sosmeeed.herokuapp.com/style/css/style.css" rel="stylesheet">
-    <link href="https://sosmeeed.herokuapp.com/style/css/colors/megna-dark.css" id="theme" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://arnz-api.herokuapp.com/public/style/bootstrap.min.css" rel="stylesheet">
+    <link href="https://arnz-api.herokuapp.com/public/style/sidebar-nav.min.css" rel="stylesheet">
+    <link href="https://arnz-api.herokuapp.com/public/style/style.css" rel="stylesheet">
+    <link href="https://arnz-api.herokuapp.com/public/style/megna-dark.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="/style/all.min.css" />
 
     <meta name="google-site-verification" content="e1dihKk8pjtLfRr1nmksU17bpx6R3kYaPKjGmy74n1s" />
     <script data-ad-client="ca-pub-1020574762848905" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -41,7 +41,7 @@
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
                 <div class="top-left-part">
-                    <a href="https://arnz-api-production.up.railway.app">
+                    <a href="https://arnz-api.herokuapp.com">
                         <img src="https://telegra.ph/file/3b27c04b1c1fa2962f5cf.jpg" width="50" alt="home" class="light-logo" />
                         <span class="hidden-xs">
                             <img src="https://telegra.ph/file/3b27c04b1c1fa2962f5cf.jpg" height="60" alt="home" class="light-logo" />
@@ -58,7 +58,7 @@
                 <div class="sidebar-head">
                     <h3><span class=" fa fa-tasks open-close"><i></i></span> <span class="hide-menu">List ARNZ™ API's</span></h3> </div>
                 <ul class="nav" id="side-menu">
-                    <li> <a href="https://arnz-api-production.up.railway.app">&nbsp;<i class="fa fa-home"></i> <span class="hide-menu">&nbsp; Home</span></a>
+                    <li> <a href="https://arnz-api.herokuapp.com">&nbsp;<i class="fa fa-home"></i> <span class="hide-menu">&nbsp; Home</span></a>
                     </li>
                     <li>
                         <a href="#" class="waves-effect">
@@ -77,6 +77,21 @@
                     </li>
                     <li>
                         <a href="#" class="waves-effect">
+                            <i class="fa fa-window-maximize" aria-hidden="true"></i>
+                            <span class="hide-menu">
+                                Media Api<span class="fa arrow"></span>
+                            </span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/api/github/stalk?username=LoliKillers">
+                                    <span class="hide-menu">Github Stalk</span>
+								</a>
+							</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
                             <i class="fa fa-child" aria-hidden="true"></i>
                             <span class="hide-menu">
                                 Anime Api<span class="fa arrow"></span>
@@ -85,7 +100,12 @@
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="/api/anime/random">
-                                    <span class="hide-menu">Ranime</span>
+                                    <span class="hide-menu">Random Anime</span>
+								</a>
+							</li>
+							<li>
+                                <a href="/api/anime/search?q=One piece">
+                                    <span class="hide-menu">Anime Search</span>
 								</a>
 							</li>
                         </ul>
@@ -100,8 +120,8 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/api/web/scanner?url=https://github.com">
-                                    <span class="hide-menu">Web Scanner</span>
+                                <a href="/api/dns/lookup?domain=arnz-api-production.up.railway.app">
+                                    <span class="hide-menu">DNS Lookup</span>
 								</a>
 							</li>
 							<li>
@@ -192,12 +212,12 @@
             <footer class="footer text-center"> 2021 & copy; ARNZ™ brought to you by <a href="https://wa.me/6285852203076" target="_blank">Ari</a>.</footer>
         </div>
     </div>
-    <script src="https://sosmeeed.herokuapp.com/style/plugins/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="https://sosmeeed.herokuapp.com/style/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://sosmeeed.herokuapp.com/style/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
-    <script src="https://sosmeeed.herokuapp.com/style/js/jquery.slimscroll.js"></script>
-    <script src="https://sosmeeed.herokuapp.com/style/js/waves.js"></script>
-    <script src="https://sosmeeed.herokuapp.com/style/js/custom.min.js"></script>
+    <script src="https://arnz-api.herokuapp.com/public/style/jquery.min.js"></script>
+    <script src="https://arnz-api.herokuapp.com/public/style/bootstrap.min.js"></script>
+    <script src="https://arnz-api.herokuapp.com/public/style/sidebar-nav.min.js"></script>
+    <script src="https://arnz-api.herokuapp.com/public/style/jquery.slimscroll.js"></script>
+    <script src="https://arnz-api.herokuapp.com/public/style/waves.js"></script>
+    <script src="https://arnz-api.herokuapp.com/public/style/custom.min.js"></script>
     <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',3717650,document.body||document.documentElement)</script>
 </body>
 
