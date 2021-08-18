@@ -294,11 +294,575 @@ router.get('/remove', (req, res, next) => {
     }
 })
 
+router.get('/simsimi', async (req, res, next) => {
+             var q = req.query.q;
+   
+	if (!q) return res.json(loghandler.nottext)
+       fetch(encodeURI(`https://pencarikode.xyz/api/simsimi?text=${q}&apikey=APIKEY`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	status : true,
+                 creator : `${creator}`,
+                 result :{
+                 	query : `${q}`,
+                 	message : `${data.result.message}`
+                 }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/nsfw/blowjob', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/nsfw/blowjob`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/nsfw/trap', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/nsfw/trap`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/nsfw/neko', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/nsfw/neko`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/nsfw/waifu', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/nsfw/waifu`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/waifu', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/waifu`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/cringe', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/cringe`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/dance', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/dance`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/poke', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/poke`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/wink', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/wink`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/happy', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/happy`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/kick', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/kick`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/kill', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/kill`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/slap', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/slap`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/glomp', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/glomp`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/bite', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/bite`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/handhold', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/handhold`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/highfive', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/highfive`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/wave', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/wave`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/smile', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/smile`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/blush', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/blush`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/yeet', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/yeet`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/bonk', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/bonk`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/smug', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/smug`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/pat', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/pat`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/lick', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/lick`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/kiss', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/kiss`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/awoo', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/awoo`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/hug', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/hug`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/cry', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/cry`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/cuddle', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/cuddle`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/bully', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/bully`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/megumin', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/megumin`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/shinobu', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/shinobu`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/neko', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/neko`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sfw/waifu', async (req, res, next) => {
+
+       fetch(encodeURI(`https://api.waifu.pics/sfw/waifu`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
 router.get('/anime/search', async (req, res, next) => {
              var q = req.query.q;
    
 	if (!q) return res.json(loghandler.nottext)
        fetch(encodeURI(`http://public-restapi.herokuapp.com/api/animeku/search?q=${q}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/tv/show', async (req, res, next) => {
+             var q = req.query.q;
+   
+	if (!q) return res.json(loghandler.nottext)
+       fetch(encodeURI(`https://api.tvmaze.com/search/shows?q=${q}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -381,7 +945,7 @@ router.get('/anime/random', async (req, res, next) => {
 })
 
 router.get('/dns/lookup', async (req, res, next) => {
-             var domainn = req.query.domain;
+             var domain = req.query.domain;
    
 	if (!domain) return res.json(loghandler.noturl)
        fetch(encodeURI(`http://public-restapi.herokuapp.com/api/dns-lookup?domain=${domain}`))
@@ -413,10 +977,10 @@ router.get('/infogempa', async (req, res, next) => {
 })
 
 router.get('/infocuaca', async (req, res, next) => {
-             var provinsi = req.query.provinsi
+             var kota = req.query.kota
    
-	if (!provinsi) return res.json(loghandler.nottext)
-       fetch(encodeURI(`http://public-restapi.herokuapp.com/api/weather?territory=${provinsi}`))
+	if (!kota) return res.json(loghandler.nottext)
+       fetch(encodeURI(`https://goweather.herokuapp.com/weather/${kota}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
