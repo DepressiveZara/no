@@ -16,7 +16,7 @@
 <p align='center'>
    <a href="https://wa.me/6283803728334"><img height="30" src="https://c.top4top.io/p_1837yybbf0.jpeg"></a>&nbsp;&nbsp;
 </P>
-![Deploy+on+Railway](https://railway.app/button.svg)](<https://railway.app/new/template?template=>)<br>
+[![Deploy+on+Railway](https://railway.app/button.svg)](<https://railway.app/new/template?template=>)<br>
 ## 🛠️ My-Api
 | Menu | API | 
 |------------ | ---------|
