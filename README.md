@@ -16,7 +16,7 @@
 <p align='center'>
    <a href="https://wa.me/6283803728334"><img height="30" src="https://c.top4top.io/p_1837yybbf0.jpeg"></a>&nbsp;&nbsp;
 </P>
-
+![Deploy+on+Railway](https://railway.app/button.svg)](<https://railway.app/new/template?template=>)<br>
 ## 🛠️ My-Api
 | Menu | API | 
 |------------ | ---------|
@@ -28,7 +28,7 @@
 | About Me | ✔️ |
 
 
-
+![Deploy+on+Railway](https://railway.app/button.svg)](<https://railway.app/new/template?template=https://github.com/TopModeJapan/arnz-api&plugins=mongodb&envs=SESSION,PMPERMIT_ENABLED,PMPERMIT_MUTETIME,DEFAULT_TR_LANG,ENABLE_DELETE_ALERT,YT_DATA_API_KEY,OCR_SPACE_API_KEY,INFOSPACE_API_KEY&SESSIONDesc=Puppeteer+Session.+Ge+it+by+running+genToken.js&PMPERMIT_ENABLEDDesc=Enable+Pmpermit+write+true+or+false+only&PMPERMIT_ENABLEDDefault=true&PMPERMIT_MUTETIMEDesc=How+many+seconds+an+user+get+muted+if+he+is+spamming.+Default+is+30+Minutes+(1800+Secs)&PMPERMIT_MUTETIMEDefault=1800&YT_DATA_API_KEYDesc=Youtube+DATA+API+key+grab+it+from+cloud.google.com&DEFAULT_TR_LANGDesc=Default+Translation+Language&DEFAULT_TR_LANGDefault=en&ENABLE_DELETE_ALERTDesc=If+true+and+if+someone+delete+message+in+PM,+Bot+will+send+the+deleted+message+in+that+chat+(Exclude+Media)&ENABLE_DELETE_ALERTDefault=true&OCR_SPACE_API_KEYDesc=Get+it+from+https://ocr.space/OCRAPI&INFOSPACE_API_KEYDesc=Get+it+from+https://infospace.club>)<br>
 ### Berikut Adalah Cara Deploy API Ini Ke Dalam Heroku
 <p align="center">
 <img src="https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/tutor/heroku/Screenshot_2021-02-23-17-47-56-969_com.android.chrome.png"/>
