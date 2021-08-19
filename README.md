@@ -1,1 +1,1 @@
-[![Deploy+on+Railway](https://railway.app/button.svg)](<https://railway.app/new/template?template=https://github.com/arnz-apiTopModeJapan&plugins=mongodb&envs=SESSION,PMPERMIT_ENABLED,PMPERMIT_MUTETIME,DEFAULT_TR_LANG,ENABLE_DELETE_ALERT,YT_DATA_API_KEY,OCR_SPACE_API_KEY,INFOSPACE_API_KEY&SESSION>)<br>
+[![Deploy+on+Railway](https://railway.app/button.svg)](<https://railway.app/new/template?template=https://github.com/arnz-apiTopModeJapan&plugins=mongodb>)<br>
